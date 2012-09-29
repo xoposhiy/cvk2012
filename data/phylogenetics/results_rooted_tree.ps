@@ -1,0 +1,2379 @@
+%!
+% rooted tree in PostScript
+%%Creator:Darwin: Sequence Searching Facility
+%%BoundingBox:0 0 538 791
+gsave
+0.5 setlinewidth
+/xs {-5.81786 sub 6.54 mul} def % x scaling
+/ys {-1.21287 sub 6.54 mul} def % y scaling
+/xw {stringwidth pop} def % string width
+/circle % white circle
+{ /r exch def /y exch def /x exch def
+  1 setgray
+  x xs y ys r 0 360 arc fill
+  0 setgray
+  x xs r add y ys moveto
+  x xs y ys r 0 360 arc stroke
+} def
+/circlec % color circle
+{ /r exch def /y exch def /x exch def
+  gsave 1 1 1 setrgbcolor
+  x xs y ys r 0 360 arc fill grestore
+  x xs y ys r 0 360 arc stroke
+} def
+/l {exch xs exch ys lineto} def
+/m {exch xs exch ys moveto} def
+/gl {0.1 setlinewidth m l stroke 0.25 setlinewidth} def
+/cl {closepath gsave setgray fill grestore stroke} def
+/clc {closepath fill stroke} def
+/ss {show stroke} def
+/Helvetica findfont 10 scalefont setfont
+502 36 translate
+90 rotate
+32.11382114 70 m
+30.48780488 69.32306921 l stroke
+/Helvetica findfont 10 scalefont setfont
+31.30081301 69.66153461 m
+(0.068) xw -1 mul 2 div 0 rmoveto
+(0.068) ss
+32.11382114 70 m
+32.92682927 69.12051079 l stroke
+/Helvetica findfont 10 scalefont setfont
+32.5203252 69.56025539 m
+(0.089) xw -1 mul 2 div 0 rmoveto
+(0.089) ss
+30.48780488 69.32306921 m
+28.86178862 68.93200063 l stroke
+/Helvetica findfont 10 scalefont setfont
+29.67479675 69.12753492 m
+(0.039) xw -1 mul 2 div 0 rmoveto
+(0.039) ss
+30.48780488 69.32306921 m
+31.30081301 65.57425271 l stroke
+/Helvetica findfont 10 scalefont setfont
+30.89430894 67.44866096 m
+(0.38) xw -1 mul 2 div 0 rmoveto
+(0.38) ss
+28.86178862 68.93200063 m
+1.219512195 68.25416856 l stroke
+/Helvetica findfont 10 scalefont setfont
+15.04065041 68.59308459 m
+(0.068) xw -1 mul 2 div 0 rmoveto
+(0.068) ss
+28.86178862 68.93200063 m
+29.67479675 67.92625797 l stroke
+/Helvetica findfont 10 scalefont setfont
+29.26829268 68.4291293 m
+(0.1) xw -1 mul 2 div 0 rmoveto
+(0.1) ss
+1.219512195 68.25416856 m
+0.406504065 63.8564226 l stroke
+/Helvetica findfont 10 scalefont setfont
+0.8130081301 66.05529558 m
+(0.44) xw -1 mul 2 div 0 rmoveto
+(0.44) ss
+1.219512195 68.25416856 m
+27.23577236 67.72433152 l stroke
+/Helvetica findfont 10 scalefont setfont
+14.22764228 67.98925004 m
+(0.053) xw -1 mul 2 div 0 rmoveto
+(0.053) ss
+0.406504065 63.8564226 m
+0 24.33557352 l stroke
+/Helvetica findfont 10 scalefont setfont
+0.2032520325 44.09599806 m
+(4) xw -1 mul 2 div 0 rmoveto
+(4) ss
+0.406504065 63.8564226 m
+0.8130081301 40.52872021 l stroke
+/Helvetica findfont 10 scalefont setfont
+0.6097560976 52.1925714 m
+(2.3) xw -1 mul 2 div 0 rmoveto
+(2.3) ss
+27.23577236 67.72433152 m
+6.910569106 66.15340848 l stroke
+/Helvetica findfont 10 scalefont setfont
+17.07317073 66.93887 m
+(0.16) xw -1 mul 2 div 0 rmoveto
+(0.16) ss
+27.23577236 67.72433152 m
+28.04878049 54.55113949 l stroke
+/Helvetica findfont 10 scalefont setfont
+27.64227642 61.1377355 m
+(1.3) xw -1 mul 2 div 0 rmoveto
+(1.3) ss
+6.910569106 66.15340848 m
+2.032520325 64.91471008 l stroke
+/Helvetica findfont 10 scalefont setfont
+4.471544715 65.53405928 m
+(0.12) xw -1 mul 2 div 0 rmoveto
+(0.12) ss
+6.910569106 66.15340848 m
+8.536585366 64.45856398 l stroke
+/Helvetica findfont 10 scalefont setfont
+7.723577236 65.30598623 m
+(0.17) xw -1 mul 2 div 0 rmoveto
+(0.17) ss
+2.032520325 64.91471008 m
+1.62601626 25.78542497 l stroke
+/Helvetica findfont 10 scalefont setfont
+1.829268293 45.35006752 m
+(3.9) xw -1 mul 2 div 0 rmoveto
+(3.9) ss
+2.032520325 64.91471008 m
+6.097560976 61.87488461 l stroke
+/Helvetica findfont 10 scalefont setfont
+4.06504065 63.39479734 m
+(0.31) xw -1 mul 2 div 0 rmoveto
+(0.31) ss
+6.097560976 61.87488461 m
+3.658536585 54.41827313 l stroke
+/Helvetica findfont 10 scalefont setfont
+4.87804878 58.14657887 m
+(0.75) xw -1 mul 2 div 0 rmoveto
+(0.75) ss
+6.097560976 61.87488461 m
+6.504065041 27.83983862 l stroke
+/Helvetica findfont 10 scalefont setfont
+6.300813008 44.85736161 m
+(3.4) xw -1 mul 2 div 0 rmoveto
+(3.4) ss
+3.658536585 54.41827313 m
+2.845528455 27.66023496 l stroke
+/Helvetica findfont 10 scalefont setfont
+3.25203252 41.03925404 m
+(2.7) xw -1 mul 2 div 0 rmoveto
+(2.7) ss
+3.658536585 54.41827313 m
+5.284552846 47.85636862 l stroke
+/Helvetica findfont 10 scalefont setfont
+4.471544715 51.13732087 m
+(0.66) xw -1 mul 2 div 0 rmoveto
+(0.66) ss
+2.845528455 27.66023496 m
+2.43902439 23.14139455 l stroke
+/Helvetica findfont 10 scalefont setfont
+2.642276423 25.40081475 m
+(0.45) xw -1 mul 2 div 0 rmoveto
+(0.45) ss
+2.845528455 27.66023496 m
+3.25203252 22.24184685 l stroke
+/Helvetica findfont 10 scalefont setfont
+3.048780488 24.9510409 m
+(0.55) xw -1 mul 2 div 0 rmoveto
+(0.55) ss
+5.284552846 47.85636862 m
+4.471544715 46.87297968 l stroke
+/Helvetica findfont 10 scalefont setfont
+4.87804878 47.36467415 m
+(0.099) xw -1 mul 2 div 0 rmoveto
+(0.099) ss
+5.284552846 47.85636862 m
+5.691056911 15.01909891 l stroke
+/Helvetica findfont 10 scalefont setfont
+5.487804878 31.43773376 m
+(3.3) xw -1 mul 2 div 0 rmoveto
+(3.3) ss
+4.471544715 46.87297968 m
+4.06504065 12.64570142 l stroke
+/Helvetica findfont 10 scalefont setfont
+4.268292683 29.75934055 m
+(3.4) xw -1 mul 2 div 0 rmoveto
+(3.4) ss
+4.471544715 46.87297968 m
+4.87804878 22.31082122 l stroke
+/Helvetica findfont 10 scalefont setfont
+4.674796748 34.59190045 m
+(2.5) xw -1 mul 2 div 0 rmoveto
+(2.5) ss
+8.536585366 64.45856398 m
+7.723577236 58.95281584 l stroke
+/Helvetica findfont 10 scalefont setfont
+8.130081301 61.70568991 m
+(0.55) xw -1 mul 2 div 0 rmoveto
+(0.55) ss
+8.536585366 64.45856398 m
+26.42276423 64.27513888 l stroke
+/Helvetica findfont 10 scalefont setfont
+17.4796748 64.36685143 m
+(0.018) xw -1 mul 2 div 0 rmoveto
+(0.018) ss
+7.723577236 58.95281584 m
+7.317073171 22.55061039 l stroke
+/Helvetica findfont 10 scalefont setfont
+7.520325203 40.75171312 m
+(3.7) xw -1 mul 2 div 0 rmoveto
+(3.7) ss
+7.723577236 58.95281584 m
+8.130081301 23.6966474 l stroke
+/Helvetica findfont 10 scalefont setfont
+7.926829268 41.32473162 m
+(3.5) xw -1 mul 2 div 0 rmoveto
+(3.5) ss
+26.42276423 64.27513888 m
+24.79674797 63.26024885 l stroke
+/Helvetica findfont 10 scalefont setfont
+25.6097561 63.76769387 m
+(0.1) xw -1 mul 2 div 0 rmoveto
+(0.1) ss
+26.42276423 64.27513888 m
+26.82926829 28.27013399 l stroke
+/Helvetica findfont 10 scalefont setfont
+26.62601626 46.27263643 m
+(3.6) xw -1 mul 2 div 0 rmoveto
+(3.6) ss
+24.79674797 63.26024885 m
+23.98373984 61.89869833 l stroke
+/Helvetica findfont 10 scalefont setfont
+24.3902439 62.57947359 m
+(0.14) xw -1 mul 2 div 0 rmoveto
+(0.14) ss
+24.79674797 63.26024885 m
+25.6097561 50.43661833 l stroke
+/Helvetica findfont 10 scalefont setfont
+25.20325203 56.84843359 m
+(1.3) xw -1 mul 2 div 0 rmoveto
+(1.3) ss
+23.98373984 61.89869833 m
+9.349593496 61.66473525 l stroke
+/Helvetica findfont 10 scalefont setfont
+16.66666667 61.78171679 m
+(0.024) xw -1 mul 2 div 0 rmoveto
+(0.024) ss
+23.98373984 61.89869833 m
+24.3902439 16.61985411 l stroke
+/Helvetica findfont 10 scalefont setfont
+24.18699187 39.25927622 m
+(4.6) xw -1 mul 2 div 0 rmoveto
+(4.6) ss
+9.349593496 61.66473525 m
+8.943089431 22.15022919 l stroke
+/Helvetica findfont 10 scalefont setfont
+9.146341463 41.90748222 m
+(4) xw -1 mul 2 div 0 rmoveto
+(4) ss
+9.349593496 61.66473525 m
+10.16260163 60.54326183 l stroke
+/Helvetica findfont 10 scalefont setfont
+9.756097561 61.10399854 m
+(0.11) xw -1 mul 2 div 0 rmoveto
+(0.11) ss
+10.16260163 60.54326183 m
+9.756097561 23.92626267 l stroke
+/Helvetica findfont 10 scalefont setfont
+9.959349593 42.23476225 m
+(3.7) xw -1 mul 2 div 0 rmoveto
+(3.7) ss
+10.16260163 60.54326183 m
+15.04065041 58.83868119 l stroke
+/Helvetica findfont 10 scalefont setfont
+12.60162602 59.69097151 m
+(0.17) xw -1 mul 2 div 0 rmoveto
+(0.17) ss
+15.04065041 58.83868119 m
+10.97560976 54.94826391 l stroke
+/Helvetica findfont 10 scalefont setfont
+13.00813008 56.89347255 m
+(0.39) xw -1 mul 2 div 0 rmoveto
+(0.39) ss
+15.04065041 58.83868119 m
+15.85365854 57.51738828 l stroke
+/Helvetica findfont 10 scalefont setfont
+15.44715447 58.17803473 m
+(0.13) xw -1 mul 2 div 0 rmoveto
+(0.13) ss
+10.97560976 54.94826391 m
+10.56910569 12.96665002 l stroke
+/Helvetica findfont 10 scalefont setfont
+10.77235772 33.95745696 m
+(4.2) xw -1 mul 2 div 0 rmoveto
+(4.2) ss
+10.97560976 54.94826391 m
+14.22764228 52.55906753 l stroke
+/Helvetica findfont 10 scalefont setfont
+12.60162602 53.75366572 m
+(0.24) xw -1 mul 2 div 0 rmoveto
+(0.24) ss
+14.22764228 52.55906753 m
+11.78861789 48.00263088 l stroke
+/Helvetica findfont 10 scalefont setfont
+13.00813008 50.2808492 m
+(0.46) xw -1 mul 2 div 0 rmoveto
+(0.46) ss
+14.22764228 52.55906753 m
+14.63414634 13.40387132 l stroke
+/Helvetica findfont 10 scalefont setfont
+14.43089431 32.98146942 m
+(3.9) xw -1 mul 2 div 0 rmoveto
+(3.9) ss
+11.78861789 48.00263088 m
+11.38211382 14.88046869 l stroke
+/Helvetica findfont 10 scalefont setfont
+11.58536585 31.44154978 m
+(3.3) xw -1 mul 2 div 0 rmoveto
+(3.3) ss
+11.78861789 48.00263088 m
+13.41463415 33.84074522 l stroke
+/Helvetica findfont 10 scalefont setfont
+12.60162602 40.92168805 m
+(1.4) xw -1 mul 2 div 0 rmoveto
+(1.4) ss
+13.41463415 33.84074522 m
+12.60162602 27.7966265 l stroke
+/Helvetica findfont 10 scalefont setfont
+13.00813008 30.81868586 m
+(0.61) xw -1 mul 2 div 0 rmoveto
+(0.61) ss
+13.41463415 33.84074522 m
+13.82113821 5.139306703 l stroke
+/Helvetica findfont 10 scalefont setfont
+13.61788618 19.49002596 m
+(2.9) xw -1 mul 2 div 0 rmoveto
+(2.9) ss
+12.60162602 27.7966265 m
+12.19512195 5.709818451 l stroke
+/Helvetica findfont 10 scalefont setfont
+12.39837398 16.75322247 m
+(2.2) xw -1 mul 2 div 0 rmoveto
+(2.2) ss
+12.60162602 27.7966265 m
+13.00813008 6.56805967 l stroke
+/Helvetica findfont 10 scalefont setfont
+12.80487805 17.18234308 m
+(2.1) xw -1 mul 2 div 0 rmoveto
+(2.1) ss
+15.85365854 57.51738828 m
+15.44715447 12.94787036 l stroke
+/Helvetica findfont 10 scalefont setfont
+15.6504065 35.23262932 m
+(4.5) xw -1 mul 2 div 0 rmoveto
+(4.5) ss
+15.85365854 57.51738828 m
+23.17073171 55.68842987 l stroke
+/Helvetica findfont 10 scalefont setfont
+19.51219512 56.60290907 m
+(0.18) xw -1 mul 2 div 0 rmoveto
+(0.18) ss
+23.17073171 55.68842987 m
+20.73170732 53.33296741 l stroke
+/Helvetica findfont 10 scalefont setfont
+21.95121951 54.51069864 m
+(0.24) xw -1 mul 2 div 0 rmoveto
+(0.24) ss
+23.17073171 55.68842987 m
+23.57723577 13.80523381 l stroke
+/Helvetica findfont 10 scalefont setfont
+23.37398374 34.74683184 m
+(4.2) xw -1 mul 2 div 0 rmoveto
+(4.2) ss
+20.73170732 53.33296741 m
+17.4796748 49.99539565 l stroke
+/Helvetica findfont 10 scalefont setfont
+19.10569106 51.66418153 m
+(0.34) xw -1 mul 2 div 0 rmoveto
+(0.34) ss
+20.73170732 53.33296741 m
+22.35772358 46.45852079 l stroke
+/Helvetica findfont 10 scalefont setfont
+21.54471545 49.8957441 m
+(0.69) xw -1 mul 2 div 0 rmoveto
+(0.69) ss
+17.4796748 49.99539565 m
+16.66666667 47.70020126 l stroke
+/Helvetica findfont 10 scalefont setfont
+17.07317073 48.84779846 m
+(0.23) xw -1 mul 2 div 0 rmoveto
+(0.23) ss
+17.4796748 49.99539565 m
+18.29268293 47.96925142 l stroke
+/Helvetica findfont 10 scalefont setfont
+17.88617886 48.98232354 m
+(0.2) xw -1 mul 2 div 0 rmoveto
+(0.2) ss
+16.66666667 47.70020126 m
+16.2601626 15.14788536 l stroke
+/Helvetica findfont 10 scalefont setfont
+16.46341463 31.42404331 m
+(3.3) xw -1 mul 2 div 0 rmoveto
+(3.3) ss
+16.66666667 47.70020126 m
+17.07317073 13.59156176 l stroke
+/Helvetica findfont 10 scalefont setfont
+16.8699187 30.64588151 m
+(3.4) xw -1 mul 2 div 0 rmoveto
+(3.4) ss
+18.29268293 47.96925142 m
+17.88617886 13.45182628 l stroke
+/Helvetica findfont 10 scalefont setfont
+18.08943089 30.71053885 m
+(3.5) xw -1 mul 2 div 0 rmoveto
+(3.5) ss
+18.29268293 47.96925142 m
+19.10569106 47.56346851 l stroke
+/Helvetica findfont 10 scalefont setfont
+18.69918699 47.76635997 m
+(0.041) xw -1 mul 2 div 0 rmoveto
+(0.041) ss
+19.10569106 47.56346851 m
+18.69918699 10.75727001 l stroke
+/Helvetica findfont 10 scalefont setfont
+18.90243902 29.16036926 m
+(3.7) xw -1 mul 2 div 0 rmoveto
+(3.7) ss
+19.10569106 47.56346851 m
+19.91869919 42.4188169 l stroke
+/Helvetica findfont 10 scalefont setfont
+19.51219512 44.9911427 m
+(0.52) xw -1 mul 2 div 0 rmoveto
+(0.52) ss
+19.91869919 42.4188169 m
+19.51219512 6.249726525 l stroke
+/Helvetica findfont 10 scalefont setfont
+19.71544715 24.33427171 m
+(3.6) xw -1 mul 2 div 0 rmoveto
+(3.6) ss
+19.91869919 42.4188169 m
+20.32520325 13.42514219 l stroke
+/Helvetica findfont 10 scalefont setfont
+20.12195122 27.92197954 m
+(2.9) xw -1 mul 2 div 0 rmoveto
+(2.9) ss
+22.35772358 46.45852079 m
+21.54471545 32.5683099 l stroke
+/Helvetica findfont 10 scalefont setfont
+21.95121951 39.51341535 m
+(1.4) xw -1 mul 2 div 0 rmoveto
+(1.4) ss
+22.35772358 46.45852079 m
+22.76422764 29.46196739 l stroke
+/Helvetica findfont 10 scalefont setfont
+22.56097561 37.96024409 m
+(1.7) xw -1 mul 2 div 0 rmoveto
+(1.7) ss
+21.54471545 32.5683099 m
+21.13821138 13.82681207 l stroke
+/Helvetica findfont 10 scalefont setfont
+21.34146341 23.19756098 m
+(1.9) xw -1 mul 2 div 0 rmoveto
+(1.9) ss
+21.54471545 32.5683099 m
+21.95121951 12.82308719 l stroke
+/Helvetica findfont 10 scalefont setfont
+21.74796748 22.69569854 m
+(2) xw -1 mul 2 div 0 rmoveto
+(2) ss
+25.6097561 50.43661833 m
+25.20325203 25.40266666 l stroke
+/Helvetica findfont 10 scalefont setfont
+25.40650407 37.9196425 m
+(2.5) xw -1 mul 2 div 0 rmoveto
+(2.5) ss
+25.6097561 50.43661833 m
+26.01626016 22.88769927 l stroke
+/Helvetica findfont 10 scalefont setfont
+25.81300813 36.6621588 m
+(2.8) xw -1 mul 2 div 0 rmoveto
+(2.8) ss
+28.04878049 54.55113949 m
+27.64227642 30.04619457 l stroke
+/Helvetica findfont 10 scalefont setfont
+27.84552846 42.29866703 m
+(2.5) xw -1 mul 2 div 0 rmoveto
+(2.5) ss
+28.04878049 54.55113949 m
+28.45528455 29.36994183 l stroke
+/Helvetica findfont 10 scalefont setfont
+28.25203252 41.96054066 m
+(2.5) xw -1 mul 2 div 0 rmoveto
+(2.5) ss
+29.67479675 67.92625797 m
+29.26829268 36.57436926 l stroke
+/Helvetica findfont 10 scalefont setfont
+29.47154472 52.25031362 m
+(3.2) xw -1 mul 2 div 0 rmoveto
+(3.2) ss
+29.67479675 67.92625797 m
+30.08130081 17.93842571 l stroke
+/Helvetica findfont 10 scalefont setfont
+29.87804878 42.93234184 m
+(5) xw -1 mul 2 div 0 rmoveto
+(5) ss
+31.30081301 65.57425271 m
+30.89430894 11.05004969 l stroke
+/Helvetica findfont 10 scalefont setfont
+31.09756098 38.3121512 m
+(5.5) xw -1 mul 2 div 0 rmoveto
+(5.5) ss
+31.30081301 65.57425271 m
+31.70731707 18.75821152 l stroke
+/Helvetica findfont 10 scalefont setfont
+31.50406504 42.16623211 m
+(4.7) xw -1 mul 2 div 0 rmoveto
+(4.7) ss
+32.92682927 69.12051079 m
+32.5203252 38.39133293 l stroke
+/Helvetica findfont 10 scalefont setfont
+32.72357724 53.75592186 m
+(3.1) xw -1 mul 2 div 0 rmoveto
+(3.1) ss
+32.92682927 69.12051079 m
+99.59349593 67.96827843 l stroke
+/Helvetica findfont 10 scalefont setfont
+66.2601626 68.54439461 m
+(0.12) xw -1 mul 2 div 0 rmoveto
+(0.12) ss
+99.59349593 67.96827843 m
+35.36585366 66.75570817 l stroke
+/Helvetica findfont 10 scalefont setfont
+67.4796748 67.3619933 m
+(0.12) xw -1 mul 2 div 0 rmoveto
+(0.12) ss
+99.59349593 67.96827843 m
+100 28.42971211 l stroke
+/Helvetica findfont 10 scalefont setfont
+99.79674797 48.19899527 m
+(4) xw -1 mul 2 div 0 rmoveto
+(4) ss
+35.36585366 66.75570817 m
+34.55284553 65.61414819 l stroke
+/Helvetica findfont 10 scalefont setfont
+34.95934959 66.18492818 m
+(0.11) xw -1 mul 2 div 0 rmoveto
+(0.11) ss
+35.36585366 66.75570817 m
+37.80487805 65.32967893 l stroke
+/Helvetica findfont 10 scalefont setfont
+36.58536585 66.04269355 m
+(0.14) xw -1 mul 2 div 0 rmoveto
+(0.14) ss
+34.55284553 65.61414819 m
+33.7398374 55.74641009 l stroke
+/Helvetica findfont 10 scalefont setfont
+34.14634146 60.68027914 m
+(0.99) xw -1 mul 2 div 0 rmoveto
+(0.99) ss
+34.55284553 65.61414819 m
+34.95934959 28.07357395 l stroke
+/Helvetica findfont 10 scalefont setfont
+34.75609756 46.84386107 m
+(3.8) xw -1 mul 2 div 0 rmoveto
+(3.8) ss
+33.7398374 55.74641009 m
+33.33333333 32.51962547 l stroke
+/Helvetica findfont 10 scalefont setfont
+33.53658537 44.13301778 m
+(2.3) xw -1 mul 2 div 0 rmoveto
+(2.3) ss
+33.7398374 55.74641009 m
+34.14634146 32.36346147 l stroke
+/Helvetica findfont 10 scalefont setfont
+33.94308943 44.05493578 m
+(2.4) xw -1 mul 2 div 0 rmoveto
+(2.4) ss
+37.80487805 65.32967893 m
+36.99186992 60.68562377 l stroke
+/Helvetica findfont 10 scalefont setfont
+37.39837398 63.00765135 m
+(0.47) xw -1 mul 2 div 0 rmoveto
+(0.47) ss
+37.80487805 65.32967893 m
+39.43089431 64.53871838 l stroke
+/Helvetica findfont 10 scalefont setfont
+38.61788618 64.93419866 m
+(0.08) xw -1 mul 2 div 0 rmoveto
+(0.08) ss
+36.99186992 60.68562377 m
+36.17886179 55.24218262 l stroke
+/Helvetica findfont 10 scalefont setfont
+36.58536585 57.96390319 m
+(0.55) xw -1 mul 2 div 0 rmoveto
+(0.55) ss
+36.99186992 60.68562377 m
+37.39837398 18.39061504 l stroke
+/Helvetica findfont 10 scalefont setfont
+37.19512195 39.5381194 m
+(4.3) xw -1 mul 2 div 0 rmoveto
+(4.3) ss
+36.17886179 55.24218262 m
+35.77235772 34.71719234 l stroke
+/Helvetica findfont 10 scalefont setfont
+35.97560976 44.97968748 m
+(2.1) xw -1 mul 2 div 0 rmoveto
+(2.1) ss
+36.17886179 55.24218262 m
+36.58536585 37.28045235 l stroke
+/Helvetica findfont 10 scalefont setfont
+36.38211382 46.26131748 m
+(1.8) xw -1 mul 2 div 0 rmoveto
+(1.8) ss
+39.43089431 64.53871838 m
+38.61788618 51.66737359 l stroke
+/Helvetica findfont 10 scalefont setfont
+39.02439024 58.10304598 m
+(1.3) xw -1 mul 2 div 0 rmoveto
+(1.3) ss
+39.43089431 64.53871838 m
+97.96747967 63.91929392 l stroke
+/Helvetica findfont 10 scalefont setfont
+68.69918699 64.22900615 m
+(0.062) xw -1 mul 2 div 0 rmoveto
+(0.062) ss
+38.61788618 51.66737359 m
+38.21138211 24.51572863 l stroke
+/Helvetica findfont 10 scalefont setfont
+38.41463415 38.09155111 m
+(2.7) xw -1 mul 2 div 0 rmoveto
+(2.7) ss
+38.61788618 51.66737359 m
+39.02439024 22.60556519 l stroke
+/Helvetica findfont 10 scalefont setfont
+38.82113821 37.13646939 m
+(2.9) xw -1 mul 2 div 0 rmoveto
+(2.9) ss
+97.96747967 63.91929392 m
+94.71544715 63.23212596 l stroke
+/Helvetica findfont 10 scalefont setfont
+96.34146341 63.57570994 m
+(0.069) xw -1 mul 2 div 0 rmoveto
+(0.069) ss
+97.96747967 63.91929392 m
+98.7804878 59.31322267 l stroke
+/Helvetica findfont 10 scalefont setfont
+98.37398374 61.61625829 m
+(0.46) xw -1 mul 2 div 0 rmoveto
+(0.46) ss
+94.71544715 63.23212596 m
+41.05691057 62.56068239 l stroke
+/Helvetica findfont 10 scalefont setfont
+67.88617886 62.89640418 m
+(0.068) xw -1 mul 2 div 0 rmoveto
+(0.068) ss
+94.71544715 63.23212596 m
+96.34146341 60.83278087 l stroke
+/Helvetica findfont 10 scalefont setfont
+95.52845528 62.03245342 m
+(0.24) xw -1 mul 2 div 0 rmoveto
+(0.24) ss
+41.05691057 62.56068239 m
+40.24390244 54.82302344 l stroke
+/Helvetica findfont 10 scalefont setfont
+40.6504065 58.69185292 m
+(0.78) xw -1 mul 2 div 0 rmoveto
+(0.78) ss
+41.05691057 62.56068239 m
+41.8699187 62.07701369 l stroke
+/Helvetica findfont 10 scalefont setfont
+41.46341463 62.31884804 m
+(0.049) xw -1 mul 2 div 0 rmoveto
+(0.049) ss
+40.24390244 54.82302344 m
+39.83739837 29.03799896 l stroke
+/Helvetica findfont 10 scalefont setfont
+40.04065041 41.9305112 m
+(2.6) xw -1 mul 2 div 0 rmoveto
+(2.6) ss
+40.24390244 54.82302344 m
+40.6504065 33.99831468 l stroke
+/Helvetica findfont 10 scalefont setfont
+40.44715447 44.41066906 m
+(2.1) xw -1 mul 2 div 0 rmoveto
+(2.1) ss
+41.8699187 62.07701369 m
+41.46341463 24.9499196 l stroke
+/Helvetica findfont 10 scalefont setfont
+41.66666667 43.51346664 m
+(3.7) xw -1 mul 2 div 0 rmoveto
+(3.7) ss
+41.8699187 62.07701369 m
+42.68292683 61.12193486 l stroke
+/Helvetica findfont 10 scalefont setfont
+42.27642276 61.59947428 m
+(0.096) xw -1 mul 2 div 0 rmoveto
+(0.096) ss
+42.68292683 61.12193486 m
+42.27642276 13.38192216 l stroke
+/Helvetica findfont 10 scalefont setfont
+42.4796748 37.25192851 m
+(4.8) xw -1 mul 2 div 0 rmoveto
+(4.8) ss
+42.68292683 61.12193486 m
+91.46341463 60.65422342 l stroke
+/Helvetica findfont 10 scalefont setfont
+67.07317073 60.88807914 m
+(0.047) xw -1 mul 2 div 0 rmoveto
+(0.047) ss
+91.46341463 60.65422342 m
+90.6504065 59.23377587 l stroke
+/Helvetica findfont 10 scalefont setfont
+91.05691057 59.94399965 m
+(0.14) xw -1 mul 2 div 0 rmoveto
+(0.14) ss
+91.46341463 60.65422342 m
+93.90243902 55.92685472 l stroke
+/Helvetica findfont 10 scalefont setfont
+92.68292683 58.29053907 m
+(0.48) xw -1 mul 2 div 0 rmoveto
+(0.48) ss
+90.6504065 59.23377587 m
+86.58536585 58.99587147 l stroke
+/Helvetica findfont 10 scalefont setfont
+88.61788618 59.11482367 m
+(0.024) xw -1 mul 2 div 0 rmoveto
+(0.024) ss
+90.6504065 59.23377587 m
+91.05691057 29.76031386 l stroke
+/Helvetica findfont 10 scalefont setfont
+90.85365854 44.49704486 m
+(3) xw -1 mul 2 div 0 rmoveto
+(3) ss
+86.58536585 58.99587147 m
+45.12195122 58.51666703 l stroke
+/Helvetica findfont 10 scalefont setfont
+65.85365854 58.75626925 m
+(0.048) xw -1 mul 2 div 0 rmoveto
+(0.048) ss
+86.58536585 58.99587147 m
+89.02439024 56.93730039 l stroke
+/Helvetica findfont 10 scalefont setfont
+87.80487805 57.96658593 m
+(0.21) xw -1 mul 2 div 0 rmoveto
+(0.21) ss
+45.12195122 58.51666703 m
+43.49593496 55.23477483 l stroke
+/Helvetica findfont 10 scalefont setfont
+44.30894309 56.87572093 m
+(0.33) xw -1 mul 2 div 0 rmoveto
+(0.33) ss
+45.12195122 58.51666703 m
+85.77235772 57.10760601 l stroke
+/Helvetica findfont 10 scalefont setfont
+65.44715447 57.81213652 m
+(0.14) xw -1 mul 2 div 0 rmoveto
+(0.14) ss
+43.49593496 55.23477483 m
+43.08943089 25.45045662 l stroke
+/Helvetica findfont 10 scalefont setfont
+43.29268293 40.34261573 m
+(3) xw -1 mul 2 div 0 rmoveto
+(3) ss
+43.49593496 55.23477483 m
+44.30894309 47.67741872 l stroke
+/Helvetica findfont 10 scalefont setfont
+43.90243902 51.45609677 m
+(0.76) xw -1 mul 2 div 0 rmoveto
+(0.76) ss
+44.30894309 47.67741872 m
+43.90243902 29.92116581 l stroke
+/Helvetica findfont 10 scalefont setfont
+44.10569106 38.79929226 m
+(1.8) xw -1 mul 2 div 0 rmoveto
+(1.8) ss
+44.30894309 47.67741872 m
+44.71544715 23.27358161 l stroke
+/Helvetica findfont 10 scalefont setfont
+44.51219512 35.47550016 m
+(2.5) xw -1 mul 2 div 0 rmoveto
+(2.5) ss
+85.77235772 57.10760601 m
+45.93495935 56.94356193 l stroke
+/Helvetica findfont 10 scalefont setfont
+65.85365854 57.02558397 m
+(0.017) xw -1 mul 2 div 0 rmoveto
+(0.017) ss
+85.77235772 57.10760601 m
+86.17886179 18.77376363 l stroke
+/Helvetica findfont 10 scalefont setfont
+85.97560976 37.94068482 m
+(3.9) xw -1 mul 2 div 0 rmoveto
+(3.9) ss
+45.93495935 56.94356193 m
+45.52845528 23.37365754 l stroke
+/Helvetica findfont 10 scalefont setfont
+45.73170732 40.15860973 m
+(3.4) xw -1 mul 2 div 0 rmoveto
+(3.4) ss
+45.93495935 56.94356193 m
+82.5203252 56.1006663 l stroke
+/Helvetica findfont 10 scalefont setfont
+64.22764228 56.52211411 m
+(0.085) xw -1 mul 2 div 0 rmoveto
+(0.085) ss
+82.5203252 56.1006663 m
+81.70731707 55.78633842 l stroke
+/Helvetica findfont 10 scalefont setfont
+82.11382114 55.94350236 m
+(0.032) xw -1 mul 2 div 0 rmoveto
+(0.032) ss
+82.5203252 56.1006663 m
+84.95934959 51.64112283 l stroke
+/Helvetica findfont 10 scalefont setfont
+83.7398374 53.87089457 m
+(0.45) xw -1 mul 2 div 0 rmoveto
+(0.45) ss
+81.70731707 55.78633842 m
+47.56097561 55.17300257 l stroke
+/Helvetica findfont 10 scalefont setfont
+64.63414634 55.4796705 m
+(0.062) xw -1 mul 2 div 0 rmoveto
+(0.062) ss
+81.70731707 55.78633842 m
+82.11382114 21.11552805 l stroke
+/Helvetica findfont 10 scalefont setfont
+81.91056911 38.45093324 m
+(3.5) xw -1 mul 2 div 0 rmoveto
+(3.5) ss
+47.56097561 55.17300257 m
+46.74796748 46.28049596 l stroke
+/Helvetica findfont 10 scalefont setfont
+47.15447154 50.72674927 m
+(0.89) xw -1 mul 2 div 0 rmoveto
+(0.89) ss
+47.56097561 55.17300257 m
+48.37398374 54.81387635 l stroke
+/Helvetica findfont 10 scalefont setfont
+47.96747967 54.99343946 m
+(0.036) xw -1 mul 2 div 0 rmoveto
+(0.036) ss
+46.74796748 46.28049596 m
+46.34146341 18.618992 l stroke
+/Helvetica findfont 10 scalefont setfont
+46.54471545 32.44974398 m
+(2.8) xw -1 mul 2 div 0 rmoveto
+(2.8) ss
+46.74796748 46.28049596 m
+47.15447154 18.61385312 l stroke
+/Helvetica findfont 10 scalefont setfont
+46.95121951 32.44717454 m
+(2.8) xw -1 mul 2 div 0 rmoveto
+(2.8) ss
+48.37398374 54.81387635 m
+47.96747967 8.310263701 l stroke
+/Helvetica findfont 10 scalefont setfont
+48.17073171 31.56207003 m
+(4.7) xw -1 mul 2 div 0 rmoveto
+(4.7) ss
+48.37398374 54.81387635 m
+80.08130081 54.39788438 l stroke
+/Helvetica findfont 10 scalefont setfont
+64.22764228 54.60588037 m
+(0.042) xw -1 mul 2 div 0 rmoveto
+(0.042) ss
+80.08130081 54.39788438 m
+78.45528455 53.91088807 l stroke
+/Helvetica findfont 10 scalefont setfont
+79.26829268 54.15438622 m
+(0.049) xw -1 mul 2 div 0 rmoveto
+(0.049) ss
+80.08130081 54.39788438 m
+80.89430894 46.71521923 l stroke
+/Helvetica findfont 10 scalefont setfont
+80.48780488 50.5565518 m
+(0.77) xw -1 mul 2 div 0 rmoveto
+(0.77) ss
+78.45528455 53.91088807 m
+77.64227642 53.78136203 l stroke
+/Helvetica findfont 10 scalefont setfont
+78.04878049 53.84612505 m
+(0.013) xw -1 mul 2 div 0 rmoveto
+(0.013) ss
+78.45528455 53.91088807 m
+79.26829268 50.26117844 l stroke
+/Helvetica findfont 10 scalefont setfont
+78.86178862 52.08603325 m
+(0.37) xw -1 mul 2 div 0 rmoveto
+(0.37) ss
+77.64227642 53.78136203 m
+50.81300813 53.2398638 l stroke
+/Helvetica findfont 10 scalefont setfont
+64.22764228 53.51061291 m
+(0.054) xw -1 mul 2 div 0 rmoveto
+(0.054) ss
+77.64227642 53.78136203 m
+78.04878049 23.82658676 l stroke
+/Helvetica findfont 10 scalefont setfont
+77.84552846 38.80397439 m
+(3) xw -1 mul 2 div 0 rmoveto
+(3) ss
+50.81300813 53.2398638 m
+50 47.36380047 l stroke
+/Helvetica findfont 10 scalefont setfont
+50.40650407 50.30183213 m
+(0.59) xw -1 mul 2 div 0 rmoveto
+(0.59) ss
+50.81300813 53.2398638 m
+51.62601626 52.24516906 l stroke
+/Helvetica findfont 10 scalefont setfont
+51.2195122 52.74251643 m
+(0.1) xw -1 mul 2 div 0 rmoveto
+(0.1) ss
+50 47.36380047 m
+49.18699187 43.6972223 l stroke
+/Helvetica findfont 10 scalefont setfont
+49.59349593 45.53051138 m
+(0.37) xw -1 mul 2 div 0 rmoveto
+(0.37) ss
+50 47.36380047 m
+50.40650407 14.53926013 l stroke
+/Helvetica findfont 10 scalefont setfont
+50.20325203 30.9515303 m
+(3.3) xw -1 mul 2 div 0 rmoveto
+(3.3) ss
+49.18699187 43.6972223 m
+48.7804878 14.34720287 l stroke
+/Helvetica findfont 10 scalefont setfont
+48.98373984 29.02221258 m
+(3) xw -1 mul 2 div 0 rmoveto
+(3) ss
+49.18699187 43.6972223 m
+49.59349593 12.60144047 l stroke
+/Helvetica findfont 10 scalefont setfont
+49.3902439 28.14933138 m
+(3.1) xw -1 mul 2 div 0 rmoveto
+(3.1) ss
+51.62601626 52.24516906 m
+51.2195122 9.377265697 l stroke
+/Helvetica findfont 10 scalefont setfont
+51.42276423 30.81121738 m
+(4.3) xw -1 mul 2 div 0 rmoveto
+(4.3) ss
+51.62601626 52.24516906 m
+58.1300813 52.13756337 l stroke
+/Helvetica findfont 10 scalefont setfont
+54.87804878 52.19136621 m
+(0.011) xw -1 mul 2 div 0 rmoveto
+(0.011) ss
+58.1300813 52.13756337 m
+52.43902439 49.94204103 l stroke
+/Helvetica findfont 10 scalefont setfont
+55.28455285 51.0398022 m
+(0.22) xw -1 mul 2 div 0 rmoveto
+(0.22) ss
+58.1300813 52.13756337 m
+59.75609756 49.66269795 l stroke
+/Helvetica findfont 10 scalefont setfont
+58.94308943 50.90013066 m
+(0.25) xw -1 mul 2 div 0 rmoveto
+(0.25) ss
+52.43902439 49.94204103 m
+52.03252033 12.93910476 l stroke
+/Helvetica findfont 10 scalefont setfont
+52.23577236 31.4405729 m
+(3.7) xw -1 mul 2 div 0 rmoveto
+(3.7) ss
+52.43902439 49.94204103 m
+54.87804878 48.30677097 l stroke
+/Helvetica findfont 10 scalefont setfont
+53.65853659 49.124406 m
+(0.16) xw -1 mul 2 div 0 rmoveto
+(0.16) ss
+54.87804878 48.30677097 m
+53.25203252 45.1795409 l stroke
+/Helvetica findfont 10 scalefont setfont
+54.06504065 46.74315593 m
+(0.31) xw -1 mul 2 div 0 rmoveto
+(0.31) ss
+54.87804878 48.30677097 m
+55.69105691 46.99181389 l stroke
+/Helvetica findfont 10 scalefont setfont
+55.28455285 47.64929243 m
+(0.13) xw -1 mul 2 div 0 rmoveto
+(0.13) ss
+53.25203252 45.1795409 m
+52.84552846 14.28234454 l stroke
+/Helvetica findfont 10 scalefont setfont
+53.04878049 29.73094272 m
+(3.1) xw -1 mul 2 div 0 rmoveto
+(3.1) ss
+53.25203252 45.1795409 m
+54.06504065 41.69937874 l stroke
+/Helvetica findfont 10 scalefont setfont
+53.65853659 43.43945982 m
+(0.35) xw -1 mul 2 div 0 rmoveto
+(0.35) ss
+54.06504065 41.69937874 m
+53.65853659 14.7510187 l stroke
+/Helvetica findfont 10 scalefont setfont
+53.86178862 28.22519872 m
+(2.7) xw -1 mul 2 div 0 rmoveto
+(2.7) ss
+54.06504065 41.69937874 m
+54.47154472 17.97761668 l stroke
+/Helvetica findfont 10 scalefont setfont
+54.26829268 29.83849771 m
+(2.4) xw -1 mul 2 div 0 rmoveto
+(2.4) ss
+55.69105691 46.99181389 m
+55.28455285 9.467338039 l stroke
+/Helvetica findfont 10 scalefont setfont
+55.48780488 28.22957596 m
+(3.8) xw -1 mul 2 div 0 rmoveto
+(3.8) ss
+55.69105691 46.99181389 m
+56.50406504 43.52179625 l stroke
+/Helvetica findfont 10 scalefont setfont
+56.09756098 45.25680507 m
+(0.35) xw -1 mul 2 div 0 rmoveto
+(0.35) ss
+56.50406504 43.52179625 m
+56.09756098 20.25729998 l stroke
+/Helvetica findfont 10 scalefont setfont
+56.30081301 31.88954811 m
+(2.3) xw -1 mul 2 div 0 rmoveto
+(2.3) ss
+56.50406504 43.52179625 m
+57.31707317 42.426455 l stroke
+/Helvetica findfont 10 scalefont setfont
+56.91056911 42.97412562 m
+(0.11) xw -1 mul 2 div 0 rmoveto
+(0.11) ss
+57.31707317 42.426455 m
+56.91056911 21.0175717 l stroke
+/Helvetica findfont 10 scalefont setfont
+57.11382114 31.72201335 m
+(2.2) xw -1 mul 2 div 0 rmoveto
+(2.2) ss
+57.31707317 42.426455 m
+57.72357724 17.22560507 l stroke
+/Helvetica findfont 10 scalefont setfont
+57.5203252 29.82603003 m
+(2.5) xw -1 mul 2 div 0 rmoveto
+(2.5) ss
+59.75609756 49.66269795 m
+58.94308943 46.60795081 l stroke
+/Helvetica findfont 10 scalefont setfont
+59.3495935 48.13532438 m
+(0.31) xw -1 mul 2 div 0 rmoveto
+(0.31) ss
+59.75609756 49.66269795 m
+71.95121951 48.80056707 l stroke
+/Helvetica findfont 10 scalefont setfont
+65.85365854 49.23163251 m
+(0.087) xw -1 mul 2 div 0 rmoveto
+(0.087) ss
+58.94308943 46.60795081 m
+58.53658537 24.27772783 l stroke
+/Helvetica findfont 10 scalefont setfont
+58.7398374 35.44283932 m
+(2.2) xw -1 mul 2 div 0 rmoveto
+(2.2) ss
+58.94308943 46.60795081 m
+59.3495935 22.32844057 l stroke
+/Helvetica findfont 10 scalefont setfont
+59.14634146 34.46819569 m
+(2.4) xw -1 mul 2 div 0 rmoveto
+(2.4) ss
+71.95121951 48.80056707 m
+65.44715447 48.51021307 l stroke
+/Helvetica findfont 10 scalefont setfont
+68.69918699 48.65539007 m
+(0.029) xw -1 mul 2 div 0 rmoveto
+(0.029) ss
+71.95121951 48.80056707 m
+75.20325203 46.56947199 l stroke
+/Helvetica findfont 10 scalefont setfont
+73.57723577 47.68501953 m
+(0.22) xw -1 mul 2 div 0 rmoveto
+(0.22) ss
+65.44715447 48.51021307 m
+60.56910569 45.33824938 l stroke
+/Helvetica findfont 10 scalefont setfont
+63.00813008 46.92423122 m
+(0.32) xw -1 mul 2 div 0 rmoveto
+(0.32) ss
+65.44715447 48.51021307 m
+66.2601626 47.34735298 l stroke
+/Helvetica findfont 10 scalefont setfont
+65.85365854 47.92878302 m
+(0.12) xw -1 mul 2 div 0 rmoveto
+(0.12) ss
+60.56910569 45.33824938 m
+60.16260163 15.43665454 l stroke
+/Helvetica findfont 10 scalefont setfont
+60.36585366 30.38745196 m
+(3) xw -1 mul 2 div 0 rmoveto
+(3) ss
+60.56910569 45.33824938 m
+63.00813008 35.79157476 l stroke
+/Helvetica findfont 10 scalefont setfont
+61.78861789 40.56491207 m
+(0.96) xw -1 mul 2 div 0 rmoveto
+(0.96) ss
+63.00813008 35.79157476 m
+61.38211382 32.64597862 l stroke
+/Helvetica findfont 10 scalefont setfont
+62.19512195 34.21877669 m
+(0.32) xw -1 mul 2 div 0 rmoveto
+(0.32) ss
+63.00813008 35.79157476 m
+64.63414634 32.51629141 l stroke
+/Helvetica findfont 10 scalefont setfont
+63.82113821 34.15393308 m
+(0.33) xw -1 mul 2 div 0 rmoveto
+(0.33) ss
+61.38211382 32.64597862 m
+60.97560976 7.168866483 l stroke
+/Helvetica findfont 10 scalefont setfont
+61.17886179 19.90742255 m
+(2.6) xw -1 mul 2 div 0 rmoveto
+(2.6) ss
+61.38211382 32.64597862 m
+62.19512195 29.0145021 l stroke
+/Helvetica findfont 10 scalefont setfont
+61.78861789 30.83024036 m
+(0.37) xw -1 mul 2 div 0 rmoveto
+(0.37) ss
+62.19512195 29.0145021 m
+61.78861789 5.952509269 l stroke
+/Helvetica findfont 10 scalefont setfont
+61.99186992 17.48350568 m
+(2.3) xw -1 mul 2 div 0 rmoveto
+(2.3) ss
+62.19512195 29.0145021 m
+62.60162602 1.406372815 l stroke
+/Helvetica findfont 10 scalefont setfont
+62.39837398 15.21043746 m
+(2.8) xw -1 mul 2 div 0 rmoveto
+(2.8) ss
+64.63414634 32.51629141 m
+63.82113821 28.05686253 l stroke
+/Helvetica findfont 10 scalefont setfont
+64.22764228 30.28657697 m
+(0.45) xw -1 mul 2 div 0 rmoveto
+(0.45) ss
+64.63414634 32.51629141 m
+65.04065041 4.195179875 l stroke
+/Helvetica findfont 10 scalefont setfont
+64.83739837 18.35573564 m
+(2.9) xw -1 mul 2 div 0 rmoveto
+(2.9) ss
+63.82113821 28.05686253 m
+63.41463415 0 l stroke
+/Helvetica findfont 10 scalefont setfont
+63.61788618 14.02843126 m
+(2.8) xw -1 mul 2 div 0 rmoveto
+(2.8) ss
+63.82113821 28.05686253 m
+64.22764228 7.431446418 l stroke
+/Helvetica findfont 10 scalefont setfont
+64.02439024 17.74415447 m
+(2.1) xw -1 mul 2 div 0 rmoveto
+(2.1) ss
+66.2601626 47.34735298 m
+65.85365854 8.080659326 l stroke
+/Helvetica findfont 10 scalefont setfont
+66.05691057 27.71400615 m
+(4) xw -1 mul 2 div 0 rmoveto
+(4) ss
+66.2601626 47.34735298 m
+71.13821138 43.87381593 l stroke
+/Helvetica findfont 10 scalefont setfont
+68.69918699 45.61058446 m
+(0.35) xw -1 mul 2 div 0 rmoveto
+(0.35) ss
+71.13821138 43.87381593 m
+68.69918699 40.84057579 l stroke
+/Helvetica findfont 10 scalefont setfont
+69.91869919 42.35719586 m
+(0.31) xw -1 mul 2 div 0 rmoveto
+(0.31) ss
+71.13821138 43.87381593 m
+71.54471545 7.040032394 l stroke
+/Helvetica findfont 10 scalefont setfont
+71.34146341 25.45692416 m
+(3.7) xw -1 mul 2 div 0 rmoveto
+(3.7) ss
+68.69918699 40.84057579 m
+67.88617886 36.03601872 l stroke
+/Helvetica findfont 10 scalefont setfont
+68.29268293 38.43829725 m
+(0.48) xw -1 mul 2 div 0 rmoveto
+(0.48) ss
+68.69918699 40.84057579 m
+70.32520325 38.25544755 l stroke
+/Helvetica findfont 10 scalefont setfont
+69.51219512 39.54801167 m
+(0.26) xw -1 mul 2 div 0 rmoveto
+(0.26) ss
+67.88617886 36.03601872 m
+67.07317073 33.98965881 l stroke
+/Helvetica findfont 10 scalefont setfont
+67.4796748 35.01283876 m
+(0.21) xw -1 mul 2 div 0 rmoveto
+(0.21) ss
+67.88617886 36.03601872 m
+68.29268293 14.74354307 l stroke
+/Helvetica findfont 10 scalefont setfont
+68.08943089 25.38978089 m
+(2.1) xw -1 mul 2 div 0 rmoveto
+(2.1) ss
+67.07317073 33.98965881 m
+66.66666667 7.902375655 l stroke
+/Helvetica findfont 10 scalefont setfont
+66.8699187 20.94601723 m
+(2.6) xw -1 mul 2 div 0 rmoveto
+(2.6) ss
+67.07317073 33.98965881 m
+67.4796748 6.563328696 l stroke
+/Helvetica findfont 10 scalefont setfont
+67.27642276 20.27649376 m
+(2.8) xw -1 mul 2 div 0 rmoveto
+(2.8) ss
+70.32520325 38.25544755 m
+69.51219512 33.671175 l stroke
+/Helvetica findfont 10 scalefont setfont
+69.91869919 35.96331127 m
+(0.46) xw -1 mul 2 div 0 rmoveto
+(0.46) ss
+70.32520325 38.25544755 m
+70.73170732 11.27445713 l stroke
+/Helvetica findfont 10 scalefont setfont
+70.52845528 24.76495234 m
+(2.7) xw -1 mul 2 div 0 rmoveto
+(2.7) ss
+69.51219512 33.671175 m
+69.10569106 9.107392987 l stroke
+/Helvetica findfont 10 scalefont setfont
+69.30894309 21.38928399 m
+(2.5) xw -1 mul 2 div 0 rmoveto
+(2.5) ss
+69.51219512 33.671175 m
+69.91869919 3.806514847 l stroke
+/Helvetica findfont 10 scalefont setfont
+69.71544715 18.73884492 m
+(3) xw -1 mul 2 div 0 rmoveto
+(3) ss
+75.20325203 46.56947199 m
+74.3902439 44.34184461 l stroke
+/Helvetica findfont 10 scalefont setfont
+74.79674797 45.4556583 m
+(0.22) xw -1 mul 2 div 0 rmoveto
+(0.22) ss
+75.20325203 46.56947199 m
+76.01626016 44.18238454 l stroke
+/Helvetica findfont 10 scalefont setfont
+75.6097561 45.37592827 m
+(0.24) xw -1 mul 2 div 0 rmoveto
+(0.24) ss
+74.3902439 44.34184461 m
+73.57723577 42.3469949 l stroke
+/Helvetica findfont 10 scalefont setfont
+73.98373984 43.34441976 m
+(0.2) xw -1 mul 2 div 0 rmoveto
+(0.2) ss
+74.3902439 44.34184461 m
+74.79674797 18.05327019 l stroke
+/Helvetica findfont 10 scalefont setfont
+74.59349593 31.1975574 m
+(2.6) xw -1 mul 2 div 0 rmoveto
+(2.6) ss
+73.57723577 42.3469949 m
+72.76422764 38.90457896 l stroke
+/Helvetica findfont 10 scalefont setfont
+73.17073171 40.62578693 m
+(0.35) xw -1 mul 2 div 0 rmoveto
+(0.35) ss
+73.57723577 42.3469949 m
+73.98373984 19.55879448 l stroke
+/Helvetica findfont 10 scalefont setfont
+73.7804878 30.95289469 m
+(2.3) xw -1 mul 2 div 0 rmoveto
+(2.3) ss
+72.76422764 38.90457896 m
+72.35772358 13.17026591 l stroke
+/Helvetica findfont 10 scalefont setfont
+72.56097561 26.03742243 m
+(2.6) xw -1 mul 2 div 0 rmoveto
+(2.6) ss
+72.76422764 38.90457896 m
+73.17073171 16.98161825 l stroke
+/Helvetica findfont 10 scalefont setfont
+72.96747967 27.9430986 m
+(2.2) xw -1 mul 2 div 0 rmoveto
+(2.2) ss
+76.01626016 44.18238454 m
+75.6097561 18.22624991 l stroke
+/Helvetica findfont 10 scalefont setfont
+75.81300813 31.20431722 m
+(2.6) xw -1 mul 2 div 0 rmoveto
+(2.6) ss
+76.01626016 44.18238454 m
+76.82926829 40.39508969 l stroke
+/Helvetica findfont 10 scalefont setfont
+76.42276423 42.28873712 m
+(0.38) xw -1 mul 2 div 0 rmoveto
+(0.38) ss
+76.82926829 40.39508969 m
+76.42276423 23.78839834 l stroke
+/Helvetica findfont 10 scalefont setfont
+76.62601626 32.09174401 m
+(1.7) xw -1 mul 2 div 0 rmoveto
+(1.7) ss
+76.82926829 40.39508969 m
+77.23577236 16.02953826 l stroke
+/Helvetica findfont 10 scalefont setfont
+77.03252033 28.21231398 m
+(2.5) xw -1 mul 2 div 0 rmoveto
+(2.5) ss
+79.26829268 50.26117844 m
+78.86178862 22.73188309 l stroke
+/Helvetica findfont 10 scalefont setfont
+79.06504065 36.49653077 m
+(2.8) xw -1 mul 2 div 0 rmoveto
+(2.8) ss
+79.26829268 50.26117844 m
+79.67479675 27.12035168 l stroke
+/Helvetica findfont 10 scalefont setfont
+79.47154472 38.69076506 m
+(2.3) xw -1 mul 2 div 0 rmoveto
+(2.3) ss
+80.89430894 46.71521923 m
+80.48780488 20.81261523 l stroke
+/Helvetica findfont 10 scalefont setfont
+80.69105691 33.76391723 m
+(2.6) xw -1 mul 2 div 0 rmoveto
+(2.6) ss
+80.89430894 46.71521923 m
+81.30081301 5.956867823 l stroke
+/Helvetica findfont 10 scalefont setfont
+81.09756098 26.33604352 m
+(4.1) xw -1 mul 2 div 0 rmoveto
+(4.1) ss
+84.95934959 51.64112283 m
+83.33333333 47.88254362 l stroke
+/Helvetica findfont 10 scalefont setfont
+84.14634146 49.76183323 m
+(0.38) xw -1 mul 2 div 0 rmoveto
+(0.38) ss
+84.95934959 51.64112283 m
+85.36585366 15.05458354 l stroke
+/Helvetica findfont 10 scalefont setfont
+85.16260163 33.34785319 m
+(3.7) xw -1 mul 2 div 0 rmoveto
+(3.7) ss
+83.33333333 47.88254362 m
+82.92682927 25.8198204 l stroke
+/Helvetica findfont 10 scalefont setfont
+83.1300813 36.85118201 m
+(2.2) xw -1 mul 2 div 0 rmoveto
+(2.2) ss
+83.33333333 47.88254362 m
+84.14634146 42.81176455 l stroke
+/Helvetica findfont 10 scalefont setfont
+83.7398374 45.34715409 m
+(0.51) xw -1 mul 2 div 0 rmoveto
+(0.51) ss
+84.14634146 42.81176455 m
+83.7398374 13.32101348 l stroke
+/Helvetica findfont 10 scalefont setfont
+83.94308943 28.06638901 m
+(3) xw -1 mul 2 div 0 rmoveto
+(3) ss
+84.14634146 42.81176455 m
+84.55284553 20.6671616 l stroke
+/Helvetica findfont 10 scalefont setfont
+84.3495935 31.73946307 m
+(2.2) xw -1 mul 2 div 0 rmoveto
+(2.2) ss
+89.02439024 56.93730039 m
+88.21138211 53.56912761 l stroke
+/Helvetica findfont 10 scalefont setfont
+88.61788618 55.253214 m
+(0.34) xw -1 mul 2 div 0 rmoveto
+(0.34) ss
+89.02439024 56.93730039 m
+89.83739837 55.26721315 l stroke
+/Helvetica findfont 10 scalefont setfont
+89.43089431 56.10225677 m
+(0.17) xw -1 mul 2 div 0 rmoveto
+(0.17) ss
+88.21138211 53.56912761 m
+87.39837398 43.68444967 l stroke
+/Helvetica findfont 10 scalefont setfont
+87.80487805 48.62678864 m
+(0.99) xw -1 mul 2 div 0 rmoveto
+(0.99) ss
+88.21138211 53.56912761 m
+88.61788618 20.9727633 l stroke
+/Helvetica findfont 10 scalefont setfont
+88.41463415 37.27094546 m
+(3.3) xw -1 mul 2 div 0 rmoveto
+(3.3) ss
+87.39837398 43.68444967 m
+86.99186992 7.674374001 l stroke
+/Helvetica findfont 10 scalefont setfont
+87.19512195 25.67941184 m
+(3.6) xw -1 mul 2 div 0 rmoveto
+(3.6) ss
+87.39837398 43.68444967 m
+87.80487805 13.77840846 l stroke
+/Helvetica findfont 10 scalefont setfont
+87.60162602 28.73142907 m
+(3) xw -1 mul 2 div 0 rmoveto
+(3) ss
+89.83739837 55.26721315 m
+89.43089431 18.58214888 l stroke
+/Helvetica findfont 10 scalefont setfont
+89.63414634 36.92468101 m
+(3.7) xw -1 mul 2 div 0 rmoveto
+(3.7) ss
+89.83739837 55.26721315 m
+90.24390244 20.29390352 l stroke
+/Helvetica findfont 10 scalefont setfont
+90.04065041 37.78055833 m
+(3.5) xw -1 mul 2 div 0 rmoveto
+(3.5) ss
+93.90243902 55.92685472 m
+92.27642276 52.09635716 l stroke
+/Helvetica findfont 10 scalefont setfont
+93.08943089 54.01160594 m
+(0.39) xw -1 mul 2 div 0 rmoveto
+(0.39) ss
+93.90243902 55.92685472 m
+94.30894309 31.87009584 l stroke
+/Helvetica findfont 10 scalefont setfont
+94.10569106 43.89847528 m
+(2.4) xw -1 mul 2 div 0 rmoveto
+(2.4) ss
+92.27642276 52.09635716 m
+91.8699187 29.80814105 l stroke
+/Helvetica findfont 10 scalefont setfont
+92.07317073 40.9522491 m
+(2.2) xw -1 mul 2 div 0 rmoveto
+(2.2) ss
+92.27642276 52.09635716 m
+93.08943089 50.13687146 l stroke
+/Helvetica findfont 10 scalefont setfont
+92.68292683 51.11661431 m
+(0.2) xw -1 mul 2 div 0 rmoveto
+(0.2) ss
+93.08943089 50.13687146 m
+92.68292683 25.65665941 l stroke
+/Helvetica findfont 10 scalefont setfont
+92.88617886 37.89676544 m
+(2.5) xw -1 mul 2 div 0 rmoveto
+(2.5) ss
+93.08943089 50.13687146 m
+93.49593496 16.67358207 l stroke
+/Helvetica findfont 10 scalefont setfont
+93.29268293 33.40522677 m
+(3.4) xw -1 mul 2 div 0 rmoveto
+(3.4) ss
+96.34146341 60.83278087 m
+95.52845528 56.33323585 l stroke
+/Helvetica findfont 10 scalefont setfont
+95.93495935 58.58300836 m
+(0.45) xw -1 mul 2 div 0 rmoveto
+(0.45) ss
+96.34146341 60.83278087 m
+97.15447154 57.03313504 l stroke
+/Helvetica findfont 10 scalefont setfont
+96.74796748 58.93295796 m
+(0.38) xw -1 mul 2 div 0 rmoveto
+(0.38) ss
+95.52845528 56.33323585 m
+95.12195122 26.37826344 l stroke
+/Helvetica findfont 10 scalefont setfont
+95.32520325 41.35574964 m
+(3) xw -1 mul 2 div 0 rmoveto
+(3) ss
+95.52845528 56.33323585 m
+95.93495935 26.66483717 l stroke
+/Helvetica findfont 10 scalefont setfont
+95.73170732 41.49903651 m
+(3) xw -1 mul 2 div 0 rmoveto
+(3) ss
+97.15447154 57.03313504 m
+96.74796748 31.68776577 l stroke
+/Helvetica findfont 10 scalefont setfont
+96.95121951 44.36045041 m
+(2.6) xw -1 mul 2 div 0 rmoveto
+(2.6) ss
+97.15447154 57.03313504 m
+97.56097561 29.79563357 l stroke
+/Helvetica findfont 10 scalefont setfont
+97.35772358 43.41438431 m
+(2.7) xw -1 mul 2 div 0 rmoveto
+(2.7) ss
+98.7804878 59.31322267 m
+98.37398374 13.81925107 l stroke
+/Helvetica findfont 10 scalefont setfont
+98.57723577 36.56623687 m
+(4.6) xw -1 mul 2 div 0 rmoveto
+(4.6) ss
+98.7804878 59.31322267 m
+99.18699187 24.07676817 l stroke
+/Helvetica findfont 10 scalefont setfont
+98.98373984 41.69499542 m
+(3.5) xw -1 mul 2 div 0 rmoveto
+(3.5) ss
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 0 24.33557352 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+0 23.88557352 m
+(Karzhaeva) xw -1 mul 2 div 0 rmoveto
+(Karzhaeva) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 0.8130081301 40.52872021 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+0.8130081301 40.07872021 m
+(Degtyar) xw -1 mul 2 div 0 rmoveto
+(Degtyar) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 1.62601626 25.78542497 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+1.62601626 25.33542497 m
+(Stefanov) xw -1 mul 2 div 0 rmoveto
+(Stefanov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 2.43902439 23.14139455 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+2.43902439 22.69139455 m
+(Volkova_Aleksandra) xw -1 mul 2 div 0 rmoveto
+(Volkova_Aleksandra) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 3.25203252 22.24184685 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+3.25203252 21.79184685 m
+(YAshin_\(YAsin\)) xw -1 mul 2 div 0 rmoveto
+(YAshin_\(YAsin\)) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 4.06504065 12.64570142 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+4.06504065 12.19570142 m
+(Rafailov) xw -1 mul 2 div 0 rmoveto
+(Rafailov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 4.87804878 22.31082122 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+4.87804878 21.86082122 m
+(Maltseva) xw -1 mul 2 div 0 rmoveto
+(Maltseva) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 5.691056911 15.01909891 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+5.691056911 14.56909891 m
+(Magkoeva) xw -1 mul 2 div 0 rmoveto
+(Magkoeva) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 6.504065041 27.83983862 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+6.504065041 27.38983862 m
+(Ponomarev) xw -1 mul 2 div 0 rmoveto
+(Ponomarev) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 7.317073171 22.55061039 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+7.317073171 22.10061039 m
+(SHalimov) xw -1 mul 2 div 0 rmoveto
+(SHalimov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 8.130081301 23.6966474 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+8.130081301 23.2466474 m
+(Savostin) xw -1 mul 2 div 0 rmoveto
+(Savostin) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 8.943089431 22.15022919 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+8.943089431 21.70022919 m
+(Kolchintsev) xw -1 mul 2 div 0 rmoveto
+(Kolchintsev) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 9.756097561 23.92626267 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+9.756097561 23.47626267 m
+(Sporyhina) xw -1 mul 2 div 0 rmoveto
+(Sporyhina) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 10.56910569 12.96665002 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+10.56910569 12.51665002 m
+(Olshanskij) xw -1 mul 2 div 0 rmoveto
+(Olshanskij) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 11.38211382 14.88046869 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+11.38211382 14.43046869 m
+(Zorin) xw -1 mul 2 div 0 rmoveto
+(Zorin) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 12.19512195 5.709818451 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+12.19512195 5.259818451 m
+(Muhin) xw -1 mul 2 div 0 rmoveto
+(Muhin) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 13.00813008 6.56805967 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+13.00813008 6.11805967 m
+(Barabash) xw -1 mul 2 div 0 rmoveto
+(Barabash) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 13.82113821 5.139306703 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+13.82113821 4.689306703 m
+(Aleksandrova-Zorina) xw -1 mul 2 div 0 rmoveto
+(Aleksandrova-Zorina) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 14.63414634 13.40387132 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+14.63414634 12.95387132 m
+(Badykova) xw -1 mul 2 div 0 rmoveto
+(Badykova) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 15.44715447 12.94787036 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+15.44715447 12.49787036 m
+(Blindul) xw -1 mul 2 div 0 rmoveto
+(Blindul) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 16.2601626 15.14788536 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+16.2601626 14.69788536 m
+(Gluskin) xw -1 mul 2 div 0 rmoveto
+(Gluskin) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 17.07317073 13.59156176 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+17.07317073 13.14156176 m
+(Nikolaev) xw -1 mul 2 div 0 rmoveto
+(Nikolaev) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 17.88617886 13.45182628 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+17.88617886 13.00182628 m
+(Budnikova) xw -1 mul 2 div 0 rmoveto
+(Budnikova) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 18.69918699 10.75727001 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+18.69918699 10.30727001 m
+(Semenov_Vladimir) xw -1 mul 2 div 0 rmoveto
+(Semenov_Vladimir) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 19.51219512 6.249726525 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+19.51219512 5.799726525 m
+(Polyakov) xw -1 mul 2 div 0 rmoveto
+(Polyakov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 20.32520325 13.42514219 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+20.32520325 12.97514219 m
+(Potkin_\(Basmanov\)) xw -1 mul 2 div 0 rmoveto
+(Potkin_\(Basmanov\)) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 21.13821138 13.82681207 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+21.13821138 13.37681207 m
+(Artyomov) xw -1 mul 2 div 0 rmoveto
+(Artyomov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 21.95121951 12.82308719 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+21.95121951 12.37308719 m
+(Matveev) xw -1 mul 2 div 0 rmoveto
+(Matveev) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 22.76422764 29.46196739 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+22.76422764 29.01196739 m
+(Kryukov) xw -1 mul 2 div 0 rmoveto
+(Kryukov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 23.57723577 13.80523381 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+23.57723577 13.35523381 m
+(Davydenko) xw -1 mul 2 div 0 rmoveto
+(Davydenko) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 24.3902439 16.61985411 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+24.3902439 16.16985411 m
+(Demushkin) xw -1 mul 2 div 0 rmoveto
+(Demushkin) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 25.20325203 25.40266666 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+25.20325203 24.95266666 m
+(Pechenev) xw -1 mul 2 div 0 rmoveto
+(Pechenev) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 26.01626016 22.88769927 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+26.01626016 22.43769927 m
+(Udaltsova) xw -1 mul 2 div 0 rmoveto
+(Udaltsova) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 26.82926829 28.27013399 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+26.82926829 27.82013399 m
+(Kolyutskij) xw -1 mul 2 div 0 rmoveto
+(Kolyutskij) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 27.64227642 30.04619457 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+27.64227642 29.59619457 m
+(Pryanikov) xw -1 mul 2 div 0 rmoveto
+(Pryanikov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 28.45528455 29.36994183 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+28.45528455 28.91994183 m
+(Davydov) xw -1 mul 2 div 0 rmoveto
+(Davydov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 29.26829268 36.57436926 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+29.26829268 36.12436926 m
+(Krylov_Konstantin) xw -1 mul 2 div 0 rmoveto
+(Krylov_Konstantin) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 30.08130081 17.93842571 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+30.08130081 17.48842571 m
+(Brusilovskij) xw -1 mul 2 div 0 rmoveto
+(Brusilovskij) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 30.89430894 11.05004969 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+30.89430894 10.60004969 m
+(Vinogradov) xw -1 mul 2 div 0 rmoveto
+(Vinogradov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 31.70731707 18.75821152 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+31.70731707 18.30821152 m
+(Kuramshin) xw -1 mul 2 div 0 rmoveto
+(Kuramshin) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 32.5203252 38.39133293 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+32.5203252 37.94133293 m
+(Levshits) xw -1 mul 2 div 0 rmoveto
+(Levshits) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 33.33333333 32.51962547 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+33.33333333 32.06962547 m
+(Kuznetsov) xw -1 mul 2 div 0 rmoveto
+(Kuznetsov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 34.14634146 32.36346147 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+34.14634146 31.91346147 m
+(Ivanov_Andrej) xw -1 mul 2 div 0 rmoveto
+(Ivanov_Andrej) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 34.95934959 28.07357395 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+34.95934959 27.62357395 m
+(Drovetskij) xw -1 mul 2 div 0 rmoveto
+(Drovetskij) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 35.77235772 34.71719234 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+35.77235772 34.26719234 m
+(Semenov_Igor) xw -1 mul 2 div 0 rmoveto
+(Semenov_Igor) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 36.58536585 37.28045235 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+36.58536585 36.83045235 m
+(Litvinov) xw -1 mul 2 div 0 rmoveto
+(Litvinov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 37.39837398 18.39061504 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+37.39837398 17.94061504 m
+(Demidov) xw -1 mul 2 div 0 rmoveto
+(Demidov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 38.21138211 24.51572863 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+38.21138211 24.06572863 m
+(Samsonov) xw -1 mul 2 div 0 rmoveto
+(Samsonov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 39.02439024 22.60556519 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+39.02439024 22.15556519 m
+(Anshakov) xw -1 mul 2 div 0 rmoveto
+(Anshakov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 39.83739837 29.03799896 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+39.83739837 28.58799896 m
+(Skalauh) xw -1 mul 2 div 0 rmoveto
+(Skalauh) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 40.6504065 33.99831468 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+40.6504065 33.54831468 m
+(Baronova) xw -1 mul 2 div 0 rmoveto
+(Baronova) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 41.46341463 24.9499196 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+41.46341463 24.4999196 m
+(Ezeev) xw -1 mul 2 div 0 rmoveto
+(Ezeev) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 42.27642276 13.38192216 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+42.27642276 12.93192216 m
+(Vituhnovskaya) xw -1 mul 2 div 0 rmoveto
+(Vituhnovskaya) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 43.08943089 25.45045662 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+43.08943089 25.00045662 m
+(SCHerbakov) xw -1 mul 2 div 0 rmoveto
+(SCHerbakov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 43.90243902 29.92116581 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+43.90243902 29.47116581 m
+(Levchenko) xw -1 mul 2 div 0 rmoveto
+(Levchenko) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 44.71544715 23.27358161 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+44.71544715 22.82358161 m
+(Bakirov) xw -1 mul 2 div 0 rmoveto
+(Bakirov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 45.52845528 23.37365754 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+45.52845528 22.92365754 m
+(Teregulov) xw -1 mul 2 div 0 rmoveto
+(Teregulov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 46.34146341 18.618992 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+46.34146341 18.168992 m
+(Renyov) xw -1 mul 2 div 0 rmoveto
+(Renyov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 47.15447154 18.61385312 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+47.15447154 18.16385312 m
+(Kozyrev) xw -1 mul 2 div 0 rmoveto
+(Kozyrev) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 47.96747967 8.310263701 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+47.96747967 7.860263701 m
+(Obraztsova) xw -1 mul 2 div 0 rmoveto
+(Obraztsova) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 48.7804878 14.34720287 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+48.7804878 13.89720287 m
+(Bezzub) xw -1 mul 2 div 0 rmoveto
+(Bezzub) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 49.59349593 12.60144047 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+49.59349593 12.15144047 m
+(Suhareva) xw -1 mul 2 div 0 rmoveto
+(Suhareva) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 50.40650407 14.53926013 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+50.40650407 14.08926013 m
+(Kuzin) xw -1 mul 2 div 0 rmoveto
+(Kuzin) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 51.2195122 9.377265697 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+51.2195122 8.927265697 m
+(Krylov_Oleg) xw -1 mul 2 div 0 rmoveto
+(Krylov_Oleg) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 52.03252033 12.93910476 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+52.03252033 12.48910476 m
+(Lavrov) xw -1 mul 2 div 0 rmoveto
+(Lavrov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 52.84552846 14.28234454 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+52.84552846 13.83234454 m
+(Vasileva) xw -1 mul 2 div 0 rmoveto
+(Vasileva) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 53.65853659 14.7510187 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+53.65853659 14.3010187 m
+(Tyutrin) xw -1 mul 2 div 0 rmoveto
+(Tyutrin) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 54.47154472 17.97761668 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+54.47154472 17.52761668 m
+(Gotsdanker) xw -1 mul 2 div 0 rmoveto
+(Gotsdanker) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 55.28455285 9.467338039 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+55.28455285 9.017338039 m
+(CHuprov) xw -1 mul 2 div 0 rmoveto
+(CHuprov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 56.09756098 20.25729998 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+56.09756098 19.80729998 m
+(Sajdashev) xw -1 mul 2 div 0 rmoveto
+(Sajdashev) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 56.91056911 21.0175717 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+56.91056911 20.5675717 m
+(Lazurenko) xw -1 mul 2 div 0 rmoveto
+(Lazurenko) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 57.72357724 17.22560507 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+57.72357724 16.77560507 m
+(Bystrov) xw -1 mul 2 div 0 rmoveto
+(Bystrov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 58.53658537 24.27772783 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+58.53658537 23.82772783 m
+(Aitova) xw -1 mul 2 div 0 rmoveto
+(Aitova) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 59.3495935 22.32844057 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+59.3495935 21.87844057 m
+(Golovin) xw -1 mul 2 div 0 rmoveto
+(Golovin) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 60.16260163 15.43665454 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+60.16260163 14.98665454 m
+(Vinokurov) xw -1 mul 2 div 0 rmoveto
+(Vinokurov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 60.97560976 7.168866483 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+60.97560976 6.718866483 m
+(Pervushin) xw -1 mul 2 div 0 rmoveto
+(Pervushin) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 61.78861789 5.952509269 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+61.78861789 5.502509269 m
+(Zalesskij) xw -1 mul 2 div 0 rmoveto
+(Zalesskij) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 62.60162602 1.406372815 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+62.60162602 0.9563728153 m
+(Dergachev) xw -1 mul 2 div 0 rmoveto
+(Dergachev) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 63.41463415 0 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+63.41463415 -0.45 m
+(Osenin) xw -1 mul 2 div 0 rmoveto
+(Osenin) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 64.22764228 7.431446418 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+64.22764228 6.981446418 m
+(SHalnev) xw -1 mul 2 div 0 rmoveto
+(SHalnev) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 65.04065041 4.195179875 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+65.04065041 3.745179875 m
+(Illarionov) xw -1 mul 2 div 0 rmoveto
+(Illarionov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 65.85365854 8.080659326 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+65.85365854 7.630659326 m
+(Dobrohotov) xw -1 mul 2 div 0 rmoveto
+(Dobrohotov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 66.66666667 7.902375655 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+66.66666667 7.452375655 m
+(Kats) xw -1 mul 2 div 0 rmoveto
+(Kats) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 67.4796748 6.563328696 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+67.4796748 6.113328696 m
+(Parhomenko) xw -1 mul 2 div 0 rmoveto
+(Parhomenko) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 68.29268293 14.74354307 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+68.29268293 14.29354307 m
+(SHnejder) xw -1 mul 2 div 0 rmoveto
+(SHnejder) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 69.10569106 9.107392987 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+69.10569106 8.657392987 m
+(Nekrasov) xw -1 mul 2 div 0 rmoveto
+(Nekrasov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 69.91869919 3.806514847 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+69.91869919 3.356514847 m
+(Gavrilov) xw -1 mul 2 div 0 rmoveto
+(Gavrilov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 70.73170732 11.27445713 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+70.73170732 10.82445713 m
+(Gelfand) xw -1 mul 2 div 0 rmoveto
+(Gelfand) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 71.54471545 7.040032394 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+71.54471545 6.590032394 m
+(Garnachuk) xw -1 mul 2 div 0 rmoveto
+(Garnachuk) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 72.35772358 13.17026591 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+72.35772358 12.72026591 m
+(Kara-Murza) xw -1 mul 2 div 0 rmoveto
+(Kara-Murza) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 73.17073171 16.98161825 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+73.17073171 16.53161825 m
+(Kashin) xw -1 mul 2 div 0 rmoveto
+(Kashin) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 73.98373984 19.55879448 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+73.98373984 19.10879448 m
+(Dzyadko) xw -1 mul 2 div 0 rmoveto
+(Dzyadko) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 74.79674797 18.05327019 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+74.79674797 17.60327019 m
+(Grebneva) xw -1 mul 2 div 0 rmoveto
+(Grebneva) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 75.6097561 18.22624991 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+75.6097561 17.77624991 m
+(Galyamina) xw -1 mul 2 div 0 rmoveto
+(Galyamina) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 76.42276423 23.78839834 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+76.42276423 23.33839834 m
+(Davidis) xw -1 mul 2 div 0 rmoveto
+(Davidis) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 77.23577236 16.02953826 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+77.23577236 15.57953826 m
+(Ashurkov) xw -1 mul 2 div 0 rmoveto
+(Ashurkov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 78.04878049 23.82658676 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+78.04878049 23.37658676 m
+(Gazaryan) xw -1 mul 2 div 0 rmoveto
+(Gazaryan) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 78.86178862 22.73188309 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+78.86178862 22.28188309 m
+(Mityushkina) xw -1 mul 2 div 0 rmoveto
+(Mityushkina) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 79.67479675 27.12035168 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+79.67479675 26.67035168 m
+(Rusakova) xw -1 mul 2 div 0 rmoveto
+(Rusakova) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 80.48780488 20.81261523 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+80.48780488 20.36261523 m
+(Maryanin) xw -1 mul 2 div 0 rmoveto
+(Maryanin) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 81.30081301 5.956867823 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+81.30081301 5.506867823 m
+(Pivovarov) xw -1 mul 2 div 0 rmoveto
+(Pivovarov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 82.11382114 21.11552805 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+82.11382114 20.66552805 m
+(Malyshev) xw -1 mul 2 div 0 rmoveto
+(Malyshev) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 82.92682927 25.8198204 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+82.92682927 25.3698204 m
+(Krasheninnikov) xw -1 mul 2 div 0 rmoveto
+(Krasheninnikov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 83.7398374 13.32101348 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+83.7398374 12.87101348 m
+(Mokshanov) xw -1 mul 2 div 0 rmoveto
+(Mokshanov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 84.55284553 20.6671616 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+84.55284553 20.2171616 m
+(Dolgih) xw -1 mul 2 div 0 rmoveto
+(Dolgih) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 85.36585366 15.05458354 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+85.36585366 14.60458354 m
+(Balasanov) xw -1 mul 2 div 0 rmoveto
+(Balasanov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 86.17886179 18.77376363 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+86.17886179 18.32376363 m
+(Bezrukih) xw -1 mul 2 div 0 rmoveto
+(Bezrukih) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 86.99186992 7.674374001 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+86.99186992 7.224374001 m
+(Gornik) xw -1 mul 2 div 0 rmoveto
+(Gornik) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 87.80487805 13.77840846 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+87.80487805 13.32840846 m
+(Gongalskij) xw -1 mul 2 div 0 rmoveto
+(Gongalskij) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 88.61788618 20.9727633 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+88.61788618 20.5227633 m
+(Vlasov) xw -1 mul 2 div 0 rmoveto
+(Vlasov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 89.43089431 18.58214888 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+89.43089431 18.13214888 m
+(Petrechuk) xw -1 mul 2 div 0 rmoveto
+(Petrechuk) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 90.24390244 20.29390352 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+90.24390244 19.84390352 m
+(SHats) xw -1 mul 2 div 0 rmoveto
+(SHats) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 91.05691057 29.76031386 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+91.05691057 29.31031386 m
+(Ovdienko) xw -1 mul 2 div 0 rmoveto
+(Ovdienko) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 91.8699187 29.80814105 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+91.8699187 29.35814105 m
+(Domozhirov) xw -1 mul 2 div 0 rmoveto
+(Domozhirov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 92.68292683 25.65665941 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+92.68292683 25.20665941 m
+(Kasparov) xw -1 mul 2 div 0 rmoveto
+(Kasparov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 93.49593496 16.67358207 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+93.49593496 16.22358207 m
+(Mirzoev) xw -1 mul 2 div 0 rmoveto
+(Mirzoev) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 94.30894309 31.87009584 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+94.30894309 31.42009584 m
+(Bilunov) xw -1 mul 2 div 0 rmoveto
+(Bilunov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 95.12195122 26.37826344 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+95.12195122 25.92826344 m
+(Smirnov) xw -1 mul 2 div 0 rmoveto
+(Smirnov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 95.93495935 26.66483717 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+95.93495935 26.21483717 m
+(Piontkovskij) xw -1 mul 2 div 0 rmoveto
+(Piontkovskij) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 96.74796748 31.68776577 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+96.74796748 31.23776577 m
+(Sannikov) xw -1 mul 2 div 0 rmoveto
+(Sannikov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 97.56097561 29.79563357 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+97.56097561 29.34563357 m
+(YAnkauskas) xw -1 mul 2 div 0 rmoveto
+(YAnkauskas) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 98.37398374 13.81925107 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+98.37398374 13.36925107 m
+(SHatov) xw -1 mul 2 div 0 rmoveto
+(SHatov) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 99.18699187 24.07676817 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+99.18699187 23.62676817 m
+(Esaulenko) xw -1 mul 2 div 0 rmoveto
+(Esaulenko) ss
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth 100 28.42971211 8 circlec
+grestore
+gsave 0 0 0 setrgbcolor 0.5 setlinewidth /Helvetica findfont 10 scalefont setfont
+100 27.97971211 m
+(Otstavnyh) xw -1 mul 2 div 0 rmoveto
+(Otstavnyh) ss
+grestore
+showpage
+grestore
+% END of Darwin DrawPlot

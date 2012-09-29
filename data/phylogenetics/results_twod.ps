@@ -1,0 +1,655 @@
+%!
+% 2D placement in PostScript
+%%Creator:Darwin: Sequence Searching Facility
+%%BoundingBox:0 0 612 792
+gsave
+0.5 setlinewidth
+/xs {-1.58245 sub 36.02 mul} def % x scaling
+/ys {-4.27868 sub 30.29 mul} def % y scaling
+/xw {stringwidth pop} def % string width
+/circle % white circle
+{ /r exch def /y exch def /x exch def
+  1 setgray
+  x xs y ys r 0 360 arc fill
+  0 setgray
+  x xs r add y ys moveto
+  x xs y ys r 0 360 arc stroke
+} def
+/circlec % color circle
+{ /r exch def /y exch def /x exch def
+  gsave 1 1 1 setrgbcolor
+  x xs y ys r 0 360 arc fill grestore
+  x xs y ys r 0 360 arc stroke
+} def
+/l {exch xs exch ys lineto} def
+/m {exch xs exch ys moveto} def
+/gl {0.1 setlinewidth m l stroke 0.25 setlinewidth} def
+/cl {closepath gsave setgray fill grestore stroke} def
+/clc {closepath fill stroke} def
+/ss {show stroke} def
+/Helvetica findfont 10 scalefont setfont
+576 36 translate
+90 rotate
+0 0 0 circle
+/Helvetica findfont 10 scalefont setfont
+0 -0.1389688079 m
+(Aleksandrova-Zorina) xw -1 mul 2 div 0 rmoveto
+(Aleksandrova-Zorina) ss
+10.42014651 0 0 circle
+/Helvetica findfont 10 scalefont setfont
+10.42014651 -0.1389688079 m
+(Anshakov) xw -1 mul 2 div 0 rmoveto
+(Anshakov) ss
+14.06068004 9.047410137 0 circle
+/Helvetica findfont 10 scalefont setfont
+14.06068004 8.908441329 m
+(Ashurkov) xw -1 mul 2 div 0 rmoveto
+(Ashurkov) ss
+0.8669115599 3.4156604 0 circle
+/Helvetica findfont 10 scalefont setfont
+0.8669115599 3.276691592 m
+(Badykova) xw -1 mul 2 div 0 rmoveto
+(Badykova) ss
+11.65342343 2.495716607 0 circle
+/Helvetica findfont 10 scalefont setfont
+11.65342343 2.356747799 m
+(Bakirov) xw -1 mul 2 div 0 rmoveto
+(Bakirov) ss
+14.80941369 2.786366324 0 circle
+/Helvetica findfont 10 scalefont setfont
+14.80941369 2.647397516 m
+(Balasanov) xw -1 mul 2 div 0 rmoveto
+(Balasanov) ss
+-0.3199675781 1.611023793 0 circle
+/Helvetica findfont 10 scalefont setfont
+-0.3199675781 1.472054985 m
+(Barabash) xw -1 mul 2 div 0 rmoveto
+(Barabash) ss
+8.728794847 4.145846224 0 circle
+/Helvetica findfont 10 scalefont setfont
+8.728794847 4.006877416 m
+(Baronova) xw -1 mul 2 div 0 rmoveto
+(Baronova) ss
+14.94665052 1.822579645 0 circle
+/Helvetica findfont 10 scalefont setfont
+14.94665052 1.683610837 m
+(Bezzub) xw -1 mul 2 div 0 rmoveto
+(Bezzub) ss
+8.245761894 10.47988887 0 circle
+/Helvetica findfont 10 scalefont setfont
+8.245761894 10.34092006 m
+(Bezrukih) xw -1 mul 2 div 0 rmoveto
+(Bezrukih) ss
+7.751346724 5.802906392 0 circle
+/Helvetica findfont 10 scalefont setfont
+7.751346724 5.663937584 m
+(Bilunov) xw -1 mul 2 div 0 rmoveto
+(Bilunov) ss
+6.502300416 -3.648490606 0 circle
+/Helvetica findfont 10 scalefont setfont
+6.502300416 -3.787459414 m
+(Blindul) xw -1 mul 2 div 0 rmoveto
+(Blindul) ss
+10.37484467 -3.46261199 0 circle
+/Helvetica findfont 10 scalefont setfont
+10.37484467 -3.601580798 m
+(Brusilovskij) xw -1 mul 2 div 0 rmoveto
+(Brusilovskij) ss
+2.943930003 -1.217685637 0 circle
+/Helvetica findfont 10 scalefont setfont
+2.943930003 -1.356654445 m
+(Budnikova) xw -1 mul 2 div 0 rmoveto
+(Budnikova) ss
+12.56685497 6.834150822 0 circle
+/Helvetica findfont 10 scalefont setfont
+12.56685497 6.695182014 m
+(Bystrov) xw -1 mul 2 div 0 rmoveto
+(Bystrov) ss
+10.9721575 10.61305158 0 circle
+/Helvetica findfont 10 scalefont setfont
+10.9721575 10.47408277 m
+(Vasileva) xw -1 mul 2 div 0 rmoveto
+(Vasileva) ss
+3.252856346 12.41739343 0 circle
+/Helvetica findfont 10 scalefont setfont
+3.252856346 12.27842463 m
+(Vinogradov) xw -1 mul 2 div 0 rmoveto
+(Vinogradov) ss
+14.78207806 6.968498694 0 circle
+/Helvetica findfont 10 scalefont setfont
+14.78207806 6.829529887 m
+(Vinokurov) xw -1 mul 2 div 0 rmoveto
+(Vinokurov) ss
+6.16495548 11.8578455 0 circle
+/Helvetica findfont 10 scalefont setfont
+6.16495548 11.71887669 m
+(Vituhnovskaya) xw -1 mul 2 div 0 rmoveto
+(Vituhnovskaya) ss
+13.080486 1.038335335 0 circle
+/Helvetica findfont 10 scalefont setfont
+13.080486 0.8993665266 m
+(Vlasov) xw -1 mul 2 div 0 rmoveto
+(Vlasov) ss
+16.45934374 0.92229766 0 circle
+/Helvetica findfont 10 scalefont setfont
+16.45934374 0.7833288521 m
+(Gavrilov) xw -1 mul 2 div 0 rmoveto
+(Gavrilov) ss
+11.70440394 5.43526688 0 circle
+/Helvetica findfont 10 scalefont setfont
+11.70440394 5.296298072 m
+(Gazaryan) xw -1 mul 2 div 0 rmoveto
+(Gazaryan) ss
+13.83515257 7.614324357 0 circle
+/Helvetica findfont 10 scalefont setfont
+13.83515257 7.475355549 m
+(Galyamina) xw -1 mul 2 div 0 rmoveto
+(Galyamina) ss
+16.73428058 7.401354602 0 circle
+/Helvetica findfont 10 scalefont setfont
+16.73428058 7.262385794 m
+(Garnachuk) xw -1 mul 2 div 0 rmoveto
+(Garnachuk) ss
+16.31239361 6.290957492 0 circle
+/Helvetica findfont 10 scalefont setfont
+16.31239361 6.151988684 m
+(Gelfand) xw -1 mul 2 div 0 rmoveto
+(Gelfand) ss
+4.936549378 -2.648716356 0 circle
+/Helvetica findfont 10 scalefont setfont
+4.936549378 -2.787685164 m
+(Gluskin) xw -1 mul 2 div 0 rmoveto
+(Gluskin) ss
+13.6302328 5.341625395 0 circle
+/Helvetica findfont 10 scalefont setfont
+13.6302328 5.202656587 m
+(Golovin) xw -1 mul 2 div 0 rmoveto
+(Golovin) ss
+13.64079889 -1.141426809 0 circle
+/Helvetica findfont 10 scalefont setfont
+13.64079889 -1.280395617 m
+(Gongalskij) xw -1 mul 2 div 0 rmoveto
+(Gongalskij) ss
+15.91780305 -0.7522066262 0 circle
+/Helvetica findfont 10 scalefont setfont
+15.91780305 -0.8911754341 m
+(Gornik) xw -1 mul 2 div 0 rmoveto
+(Gornik) ss
+9.505916373 10.04605643 0 circle
+/Helvetica findfont 10 scalefont setfont
+9.505916373 9.907087624 m
+(Gotsdanker) xw -1 mul 2 div 0 rmoveto
+(Gotsdanker) ss
+10.75650545 9.254249403 0 circle
+/Helvetica findfont 10 scalefont setfont
+10.75650545 9.115280595 m
+(Grebneva) xw -1 mul 2 div 0 rmoveto
+(Grebneva) ss
+0.7085030611 4.664475462 0 circle
+/Helvetica findfont 10 scalefont setfont
+0.7085030611 4.525506654 m
+(Davydenko) xw -1 mul 2 div 0 rmoveto
+(Davydenko) ss
+8.375999025 -0.7531200117 0 circle
+/Helvetica findfont 10 scalefont setfont
+8.375999025 -0.8920888196 m
+(Davydov) xw -1 mul 2 div 0 rmoveto
+(Davydov) ss
+6.816196436 2.764554225 0 circle
+/Helvetica findfont 10 scalefont setfont
+6.816196436 2.625585417 m
+(Degtyar) xw -1 mul 2 div 0 rmoveto
+(Degtyar) ss
+11.27911481 -1.85988575 0 circle
+/Helvetica findfont 10 scalefont setfont
+11.27911481 -1.998854558 m
+(Demidov) xw -1 mul 2 div 0 rmoveto
+(Demidov) ss
+12.19556858 13.31940233 0 circle
+/Helvetica findfont 10 scalefont setfont
+12.19556858 13.18043352 m
+(Dergachev) xw -1 mul 2 div 0 rmoveto
+(Dergachev) ss
+11.82637067 8.399735153 0 circle
+/Helvetica findfont 10 scalefont setfont
+11.82637067 8.260766345 m
+(Dzyadko) xw -1 mul 2 div 0 rmoveto
+(Dzyadko) ss
+11.41941114 12.14664818 0 circle
+/Helvetica findfont 10 scalefont setfont
+11.41941114 12.00767938 m
+(Dobrohotov) xw -1 mul 2 div 0 rmoveto
+(Dobrohotov) ss
+8.691097972 6.159185721 0 circle
+/Helvetica findfont 10 scalefont setfont
+8.691097972 6.020216913 m
+(Domozhirov) xw -1 mul 2 div 0 rmoveto
+(Domozhirov) ss
+11.24961384 -0.06011344896 0 circle
+/Helvetica findfont 10 scalefont setfont
+11.24961384 -0.1990822569 m
+(Ezeev) xw -1 mul 2 div 0 rmoveto
+(Ezeev) ss
+5.915778918 -2.751455546 0 circle
+/Helvetica findfont 10 scalefont setfont
+5.915778918 -2.890424354 m
+(Zorin) xw -1 mul 2 div 0 rmoveto
+(Zorin) ss
+7.401801093 4.142465411 0 circle
+/Helvetica findfont 10 scalefont setfont
+7.401801093 4.003496603 m
+(Ivanov_Andrej) xw -1 mul 2 div 0 rmoveto
+(Ivanov_Andrej) ss
+13.75272917 11.99406735 0 circle
+/Helvetica findfont 10 scalefont setfont
+13.75272917 11.85509854 m
+(Illarionov) xw -1 mul 2 div 0 rmoveto
+(Illarionov) ss
+13.29357406 10.27496631 0 circle
+/Helvetica findfont 10 scalefont setfont
+13.29357406 10.1359975 m
+(Kara-Murza) xw -1 mul 2 div 0 rmoveto
+(Kara-Murza) ss
+3.252316573 8.544213165 0 circle
+/Helvetica findfont 10 scalefont setfont
+3.252316573 8.405244357 m
+(Karzhaeva) xw -1 mul 2 div 0 rmoveto
+(Karzhaeva) ss
+7.637722769 9.110194069 0 circle
+/Helvetica findfont 10 scalefont setfont
+7.637722769 8.971225261 m
+(Kasparov) xw -1 mul 2 div 0 rmoveto
+(Kasparov) ss
+17.1415844 5.302985518 0 circle
+/Helvetica findfont 10 scalefont setfont
+17.1415844 5.16401671 m
+(Kats) xw -1 mul 2 div 0 rmoveto
+(Kats) ss
+12.81253447 9.295927165 0 circle
+/Helvetica findfont 10 scalefont setfont
+12.81253447 9.156958357 m
+(Kashin) xw -1 mul 2 div 0 rmoveto
+(Kashin) ss
+13.6747746 6.385828481 0 circle
+/Helvetica findfont 10 scalefont setfont
+13.6747746 6.246859673 m
+(Kozyrev) xw -1 mul 2 div 0 rmoveto
+(Kozyrev) ss
+2.037175263 6.852327564 0 circle
+/Helvetica findfont 10 scalefont setfont
+2.037175263 6.713358756 m
+(Kolchintsev) xw -1 mul 2 div 0 rmoveto
+(Kolchintsev) ss
+3.763732612 4.330082142 0 circle
+/Helvetica findfont 10 scalefont setfont
+3.763732612 4.191113334 m
+(Kolyutskij) xw -1 mul 2 div 0 rmoveto
+(Kolyutskij) ss
+10.69939696 5.201689601 0 circle
+/Helvetica findfont 10 scalefont setfont
+10.69939696 5.062720793 m
+(Krasheninnikov) xw -1 mul 2 div 0 rmoveto
+(Krasheninnikov) ss
+16.4485088 4.592919383 0 circle
+/Helvetica findfont 10 scalefont setfont
+16.4485088 4.453950575 m
+(Krylov_Oleg) xw -1 mul 2 div 0 rmoveto
+(Krylov_Oleg) ss
+5.373687037 2.005415498 0 circle
+/Helvetica findfont 10 scalefont setfont
+5.373687037 1.86644669 m
+(Kryukov) xw -1 mul 2 div 0 rmoveto
+(Kryukov) ss
+15.42814291 5.066401615 0 circle
+/Helvetica findfont 10 scalefont setfont
+15.42814291 4.927432807 m
+(Kuzin) xw -1 mul 2 div 0 rmoveto
+(Kuzin) ss
+6.501598042 4.729206285 0 circle
+/Helvetica findfont 10 scalefont setfont
+6.501598042 4.590237477 m
+(Kuznetsov) xw -1 mul 2 div 0 rmoveto
+(Kuznetsov) ss
+11.42452809 -3.369003943 0 circle
+/Helvetica findfont 10 scalefont setfont
+11.42452809 -3.507972751 m
+(Kuramshin) xw -1 mul 2 div 0 rmoveto
+(Kuramshin) ss
+15.00606764 8.596462223 0 circle
+/Helvetica findfont 10 scalefont setfont
+15.00606764 8.457493415 m
+(Lavrov) xw -1 mul 2 div 0 rmoveto
+(Lavrov) ss
+12.6192223 8.051630364 0 circle
+/Helvetica findfont 10 scalefont setfont
+12.6192223 7.912661556 m
+(Lazurenko) xw -1 mul 2 div 0 rmoveto
+(Lazurenko) ss
+10.41789679 4.004773699 0 circle
+/Helvetica findfont 10 scalefont setfont
+10.41789679 3.865804891 m
+(Levchenko) xw -1 mul 2 div 0 rmoveto
+(Levchenko) ss
+7.827233737 1.787938485 0 circle
+/Helvetica findfont 10 scalefont setfont
+7.827233737 1.648969677 m
+(Levshits) xw -1 mul 2 div 0 rmoveto
+(Levshits) ss
+9.606703058 2.246841049 0 circle
+/Helvetica findfont 10 scalefont setfont
+9.606703058 2.107872241 m
+(Litvinov) xw -1 mul 2 div 0 rmoveto
+(Litvinov) ss
+2.456819708 10.62711399 0 circle
+/Helvetica findfont 10 scalefont setfont
+2.456819708 10.48814518 m
+(Magkoeva) xw -1 mul 2 div 0 rmoveto
+(Magkoeva) ss
+8.876035069 9.133590207 0 circle
+/Helvetica findfont 10 scalefont setfont
+8.876035069 8.994621399 m
+(Malyshev) xw -1 mul 2 div 0 rmoveto
+(Malyshev) ss
+3.596429994 9.770883627 0 circle
+/Helvetica findfont 10 scalefont setfont
+3.596429994 9.631914819 m
+(Maltseva) xw -1 mul 2 div 0 rmoveto
+(Maltseva) ss
+13.53883595 3.423348587 0 circle
+/Helvetica findfont 10 scalefont setfont
+13.53883595 3.284379779 m
+(Maryanin) xw -1 mul 2 div 0 rmoveto
+(Maryanin) ss
+4.114077113 -2.40852931 0 circle
+/Helvetica findfont 10 scalefont setfont
+4.114077113 -2.547498118 m
+(Matveev) xw -1 mul 2 div 0 rmoveto
+(Matveev) ss
+7.153048295 11.25036495 0 circle
+/Helvetica findfont 10 scalefont setfont
+7.153048295 11.11139614 m
+(Mirzoev) xw -1 mul 2 div 0 rmoveto
+(Mirzoev) ss
+10.06827446 8.333804777 0 circle
+/Helvetica findfont 10 scalefont setfont
+10.06827446 8.194835969 m
+(Mityushkina) xw -1 mul 2 div 0 rmoveto
+(Mityushkina) ss
+14.57743249 0.7938339777 0 circle
+/Helvetica findfont 10 scalefont setfont
+14.57743249 0.6548651697 m
+(Mokshanov) xw -1 mul 2 div 0 rmoveto
+(Mokshanov) ss
+-0.6495051968 5.843565865 0 circle
+/Helvetica findfont 10 scalefont setfont
+-0.6495051968 5.704597057 m
+(Muhin) xw -1 mul 2 div 0 rmoveto
+(Muhin) ss
+16.94742719 3.633419157 0 circle
+/Helvetica findfont 10 scalefont setfont
+16.94742719 3.494450349 m
+(Nekrasov) xw -1 mul 2 div 0 rmoveto
+(Nekrasov) ss
+8.433028607 12.53331205 0 circle
+/Helvetica findfont 10 scalefont setfont
+8.433028607 12.39434324 m
+(Obraztsova) xw -1 mul 2 div 0 rmoveto
+(Obraztsova) ss
+10.80819117 3.036838135 0 circle
+/Helvetica findfont 10 scalefont setfont
+10.80819117 2.897869327 m
+(Ovdienko) xw -1 mul 2 div 0 rmoveto
+(Ovdienko) ss
+8.120438551 -4.051698659 0 circle
+/Helvetica findfont 10 scalefont setfont
+8.120438551 -4.190667467 m
+(Olshanskij) xw -1 mul 2 div 0 rmoveto
+(Olshanskij) ss
+16.35466404 10.71461238 0 circle
+/Helvetica findfont 10 scalefont setfont
+16.35466404 10.57564358 m
+(Osenin) xw -1 mul 2 div 0 rmoveto
+(Osenin) ss
+4.802923119 6.635339709 0 circle
+/Helvetica findfont 10 scalefont setfont
+4.802923119 6.496370901 m
+(Otstavnyh) xw -1 mul 2 div 0 rmoveto
+(Otstavnyh) ss
+17.57201751 6.514032576 0 circle
+/Helvetica findfont 10 scalefont setfont
+17.57201751 6.375063768 m
+(Parhomenko) xw -1 mul 2 div 0 rmoveto
+(Parhomenko) ss
+10.21301581 12.85107415 0 circle
+/Helvetica findfont 10 scalefont setfont
+10.21301581 12.71210534 m
+(Pervushin) xw -1 mul 2 div 0 rmoveto
+(Pervushin) ss
+12.29660253 0.6345318957 0 circle
+/Helvetica findfont 10 scalefont setfont
+12.29660253 0.4955630878 m
+(Petrechuk) xw -1 mul 2 div 0 rmoveto
+(Petrechuk) ss
+6.141249392 8.491770923 0 circle
+/Helvetica findfont 10 scalefont setfont
+6.141249392 8.352802115 m
+(Piontkovskij) xw -1 mul 2 div 0 rmoveto
+(Piontkovskij) ss
+-0.6860186874 3.22950035 0 circle
+/Helvetica findfont 10 scalefont setfont
+-0.6860186874 3.090531542 m
+(Polyakov) xw -1 mul 2 div 0 rmoveto
+(Polyakov) ss
+4.115981964 5.604780024 0 circle
+/Helvetica findfont 10 scalefont setfont
+4.115981964 5.465811217 m
+(Ponomarev) xw -1 mul 2 div 0 rmoveto
+(Ponomarev) ss
+1.472035047 1.802154884 0 circle
+/Helvetica findfont 10 scalefont setfont
+1.472035047 1.663186076 m
+(Potkin_\(Basmanov\)) xw -1 mul 2 div 0 rmoveto
+(Potkin_\(Basmanov\)) ss
+5.545968969 1.151497865 0 circle
+/Helvetica findfont 10 scalefont setfont
+5.545968969 1.012529057 m
+(Pryanikov) xw -1 mul 2 div 0 rmoveto
+(Pryanikov) ss
+12.8599358 2.012316708 0 circle
+/Helvetica findfont 10 scalefont setfont
+12.8599358 1.8733479 m
+(Renyov) xw -1 mul 2 div 0 rmoveto
+(Renyov) ss
+9.616181221 7.617415745 0 circle
+/Helvetica findfont 10 scalefont setfont
+9.616181221 7.478446937 m
+(Rusakova) xw -1 mul 2 div 0 rmoveto
+(Rusakova) ss
+3.250608771 3.111503129 0 circle
+/Helvetica findfont 10 scalefont setfont
+3.250608771 2.972534321 m
+(Savostin) xw -1 mul 2 div 0 rmoveto
+(Savostin) ss
+12.95074135 4.972737415 0 circle
+/Helvetica findfont 10 scalefont setfont
+12.95074135 4.833768607 m
+(Sajdashev) xw -1 mul 2 div 0 rmoveto
+(Sajdashev) ss
+5.738079555 3.741886914 0 circle
+/Helvetica findfont 10 scalefont setfont
+5.738079555 3.602918106 m
+(Samsonov) xw -1 mul 2 div 0 rmoveto
+(Samsonov) ss
+1.785768152 0.5544590948 0 circle
+/Helvetica findfont 10 scalefont setfont
+1.785768152 0.4154902869 m
+(Semenov_Vladimir) xw -1 mul 2 div 0 rmoveto
+(Semenov_Vladimir) ss
+8.706674189 1.961887907 0 circle
+/Helvetica findfont 10 scalefont setfont
+8.706674189 1.822919099 m
+(Semenov_Igor) xw -1 mul 2 div 0 rmoveto
+(Semenov_Igor) ss
+9.261686838 3.368412384 0 circle
+/Helvetica findfont 10 scalefont setfont
+9.261686838 3.229443576 m
+(Skalauh) xw -1 mul 2 div 0 rmoveto
+(Skalauh) ss
+6.403492318 9.810563098 0 circle
+/Helvetica findfont 10 scalefont setfont
+6.403492318 9.67159429 m
+(Smirnov) xw -1 mul 2 div 0 rmoveto
+(Smirnov) ss
+3.695541912 1.980460182 0 circle
+/Helvetica findfont 10 scalefont setfont
+3.695541912 1.841491374 m
+(Sporyhina) xw -1 mul 2 div 0 rmoveto
+(Sporyhina) ss
+3.408213916 7.506413533 0 circle
+/Helvetica findfont 10 scalefont setfont
+3.408213916 7.367444725 m
+(Stefanov) xw -1 mul 2 div 0 rmoveto
+(Stefanov) ss
+15.60630715 2.840307746 0 circle
+/Helvetica findfont 10 scalefont setfont
+15.60630715 2.701338938 m
+(Suhareva) xw -1 mul 2 div 0 rmoveto
+(Suhareva) ss
+9.872901124 6.28722494 0 circle
+/Helvetica findfont 10 scalefont setfont
+9.872901124 6.148256132 m
+(Teregulov) xw -1 mul 2 div 0 rmoveto
+(Teregulov) ss
+8.165353668 -1.759151514 0 circle
+/Helvetica findfont 10 scalefont setfont
+8.165353668 -1.898120322 m
+(Udaltsova) xw -1 mul 2 div 0 rmoveto
+(Udaltsova) ss
+12.47650706 11.71828283 0 circle
+/Helvetica findfont 10 scalefont setfont
+12.47650706 11.57931402 m
+(CHuprov) xw -1 mul 2 div 0 rmoveto
+(CHuprov) ss
+12.8809539 -1.660097566 0 circle
+/Helvetica findfont 10 scalefont setfont
+12.8809539 -1.799066374 m
+(SHatov) xw -1 mul 2 div 0 rmoveto
+(SHatov) ss
+10.82351097 1.49651313 0 circle
+/Helvetica findfont 10 scalefont setfont
+10.82351097 1.357544322 m
+(SHats) xw -1 mul 2 div 0 rmoveto
+(SHats) ss
+15.3903908 7.867349078 0 circle
+/Helvetica findfont 10 scalefont setfont
+15.3903908 7.72838027 m
+(SHnejder) xw -1 mul 2 div 0 rmoveto
+(SHnejder) ss
+8.334639203 7.29163131 0 circle
+/Helvetica findfont 10 scalefont setfont
+8.334639203 7.152662502 m
+(SCHerbakov) xw -1 mul 2 div 0 rmoveto
+(SCHerbakov) ss
+5.673292326 7.66683189 0 circle
+/Helvetica findfont 10 scalefont setfont
+5.673292326 7.527863082 m
+(Esaulenko) xw -1 mul 2 div 0 rmoveto
+(Esaulenko) ss
+7.146709321 6.415205799 0 circle
+/Helvetica findfont 10 scalefont setfont
+7.146709321 6.276236991 m
+(YAnkauskas) xw -1 mul 2 div 0 rmoveto
+(YAnkauskas) ss
+1.964554432 5.880388745 0 circle
+/Helvetica findfont 10 scalefont setfont
+1.964554432 5.741419937 m
+(YAshin_\(YAsin\)) xw -1 mul 2 div 0 rmoveto
+(YAshin_\(YAsin\)) ss
+11.43799864 6.516328793 0 circle
+/Helvetica findfont 10 scalefont setfont
+11.43799864 6.377359985 m
+(Aitova) xw -1 mul 2 div 0 rmoveto
+(Aitova) ss
+2.154083882 5.320178556 0 circle
+/Helvetica findfont 10 scalefont setfont
+2.154083882 5.181209748 m
+(Volkova_Aleksandra) xw -1 mul 2 div 0 rmoveto
+(Volkova_Aleksandra) ss
+2.262253515 -0.5358520024 0 circle
+/Helvetica findfont 10 scalefont setfont
+2.262253515 -0.6748208104 m
+(Nikolaev) xw -1 mul 2 div 0 rmoveto
+(Nikolaev) ss
+6.722838372 -0.9741901496 0 circle
+/Helvetica findfont 10 scalefont setfont
+6.722838372 -1.113158958 m
+(Pechenev) xw -1 mul 2 div 0 rmoveto
+(Pechenev) ss
+0.6346218704 8.278809482 0 circle
+/Helvetica findfont 10 scalefont setfont
+0.6346218704 8.139840674 m
+(Rafailov) xw -1 mul 2 div 0 rmoveto
+(Rafailov) ss
+6.977364136 7.523068687 0 circle
+/Helvetica findfont 10 scalefont setfont
+6.977364136 7.384099879 m
+(Sannikov) xw -1 mul 2 div 0 rmoveto
+(Sannikov) ss
+4.861313525 -0.05989836023 0 circle
+/Helvetica findfont 10 scalefont setfont
+4.861313525 -0.1988671682 m
+(SHalimov) xw -1 mul 2 div 0 rmoveto
+(SHalimov) ss
+11.16590771 7.972093757 0 circle
+/Helvetica findfont 10 scalefont setfont
+11.16590771 7.833124949 m
+(Davidis) xw -1 mul 2 div 0 rmoveto
+(Davidis) ss
+12.48149402 3.887009694 0 circle
+/Helvetica findfont 10 scalefont setfont
+12.48149402 3.748040886 m
+(Dolgih) xw -1 mul 2 div 0 rmoveto
+(Dolgih) ss
+15.14690829 11.0196485 0 circle
+/Helvetica findfont 10 scalefont setfont
+15.14690829 10.88067969 m
+(Zalesskij) xw -1 mul 2 div 0 rmoveto
+(Zalesskij) ss
+17.25666776 2.717775145 0 circle
+/Helvetica findfont 10 scalefont setfont
+17.25666776 2.578806337 m
+(Pivovarov) xw -1 mul 2 div 0 rmoveto
+(Pivovarov) ss
+9.751062651 11.32687115 0 circle
+/Helvetica findfont 10 scalefont setfont
+9.751062651 11.18790234 m
+(Tyutrin) xw -1 mul 2 div 0 rmoveto
+(Tyutrin) ss
+14.16284545 11.18610071 0 circle
+/Helvetica findfont 10 scalefont setfont
+14.16284545 11.0471319 m
+(SHalnev) xw -1 mul 2 div 0 rmoveto
+(SHalnev) ss
+3.577253598 -1.688644963 0 circle
+/Helvetica findfont 10 scalefont setfont
+3.577253598 -1.827613771 m
+(Artyomov) xw -1 mul 2 div 0 rmoveto
+(Artyomov) ss
+8.733639679 -3.141872454 0 circle
+/Helvetica findfont 10 scalefont setfont
+8.733639679 -3.280841262 m
+(Demushkin) xw -1 mul 2 div 0 rmoveto
+(Demushkin) ss
+5.245632815 9.698910275 0 circle
+/Helvetica findfont 10 scalefont setfont
+5.245632815 9.559941467 m
+(Drovetskij) xw -1 mul 2 div 0 rmoveto
+(Drovetskij) ss
+7.433910864 0.9185345341 0 circle
+/Helvetica findfont 10 scalefont setfont
+7.433910864 0.7795657261 m
+(Krylov_Konstantin) xw -1 mul 2 div 0 rmoveto
+(Krylov_Konstantin) ss
+showpage
+grestore
+% END of Darwin DrawPlot
