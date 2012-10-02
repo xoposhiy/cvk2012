@@ -23,10 +23,10 @@ curias <- data[candidates,2] + 1
 
 write.csv(pca$loadings, file="../results/pca_all_components.csv")
 
-plot(ux, uy, pch='·', asp=1, col="grey", xlab="Economical freedom", ylab="Tolerance to current goverment")
+plot(ux, uy, pch='·', asp=1, col="grey", xlab="Economical freedom (-18+24-14-2-6-19)", ylab="Tolerance to current goverment (-15 -12)")
 points(x, y, pch=20, asp=1, col=colors[curias])
 pointLabel(x, y, labels = names, cex=0.45, col=textcolors[curias])
-plot(ux, uz, pch='·', asp=1, col="grey", xlab="Economical freedom", ylab="RobinGoodness")
+plot(ux, uz, pch='·', asp=1, col="grey", xlab="Economical freedom (-18+24-14-2-6-19)", ylab="RobinGoodness (-14-5-25-10-3)")
 points(x, z, pch=20, asp=1, col=colors[curias])
 pointLabel(x, z, labels = names, cex=0.45, col=textcolors[curias])
 dev.off()
