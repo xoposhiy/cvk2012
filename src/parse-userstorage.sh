@@ -1,0 +1,1 @@
+grep "" ../data/userstorage.json | perl -pe 's/^.*\[(.*)\].*$/$1/' | grep -v "null" > ../data/user-answers.csv

@@ -1,0 +1,1 @@
+grep "candidate_compass_data" | grep "\[" | perl -pe 's/^.*\[(.*)\].*$/$1/' | perl -pe 's/,/\t/g'
