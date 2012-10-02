@@ -15,6 +15,7 @@ names <- data[,1]
 curias <- data[,2] + 1
 
 write.csv(cbind(as.character(names),curias,x,y), file="../results/pca.csv")
+write.csv(pca$loadings, file="../results/pca_components.csv")
 
 plot(x, y, pch=20, asp=1, col=colors[curias])
 set.seed(123)
