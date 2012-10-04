@@ -1,6 +1,6 @@
 # prepare csv files for import in gephi. Coordinates — result of PCA
 
-v <- read.csv("../data/vs.csv", encoding="Windows-1251")
+v <- read.csv("../data/vectors.csv", encoding="Windows-1251")
 fnodes = "../data/gnodes.csv"
 fedges = "../data/gedges.csv"
 #nodes
