@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-
+use encoding 'utf8';
 sub k82tr
     { ($_)=@_;
 
@@ -7,32 +7,32 @@ sub k82tr
 # Fonetic correct translit
 #
 
-s/Ρυ/S\'h/; s/ρυ/s\'h/; s/ΡΥ/S\'H/;
-s/Ψ/Sh/g; s/ψ/sh/g;
+s/Π΅Ρ…/S\'h/; s/ΡΡ…/s\'h/; s/Π΅Π¥/S\'H/;
+s/Π¨/Sh/g; s/Ρ/sh/g;
 
-s/Ρφυ/Sc\'h/; s/ρφυ/sc\'h/; s/ΡΦΥ/SC\'H/;
-s/Ω/Sch/g; s/ω/sch/g;
+s/Π΅Ρ†Ρ…/Sc\'h/; s/ΡΡ†Ρ…/sc\'h/; s/Π΅Π¦Π¥/SC\'H/;
+s/Π©/Sch/g; s/Ρ‰/sch/g;
 
-s/Φυ/C\'h/; s/φυ/c\'h/; s/ΦΥ/C\'H/;
-s/Χ/Ch/g; s/χ/ch/g;
+s/Π¦Ρ…/C\'h/; s/Ρ†Ρ…/c\'h/; s/Π¦Π¥/C\'H/;
+s/Π§/Ch/g; s/Ρ‡/ch/g;
 
-s/Ιΰ/J\'a/; s/ιΰ/j\'a/; s/Ιΐ/J\'A/;
-s/ί/Ja/g; s/ÿ/ja/g;
+s/Π™Π°/J\'a/; s/ΠΉΠ°/j\'a/; s/Π™Π/J\'A/;
+s/Π―/Ja/g; s/Ρ/ja/g;
 
-s/Ιξ/J\'o/; s/ιξ/j\'o/; s/ΙΞ/J\'O/;
-s/¨/Jo/g; s/Έ/jo/g;
+s/Π™ΠΎ/J\'o/; s/ΠΉΠΎ/j\'o/; s/Π™Π/J\'O/;
+s/Π/Jo/g; s/Ρ‘/jo/g;
 
-s/Ισ/J\'u/; s/ισ/j\'u/; s/ΙΣ/J\'U/;
-s/ή/Ju/g; s/ώ/ju/g;
+s/Π™Ρƒ/J\'u/; s/ΠΉΡƒ/j\'u/; s/Π™Π£/J\'U/;
+s/Π®/Ju/g; s/Ρ/ju/g;
 
-s/έ/E\'/g; s/ύ/e\'/g;
-s/Ε/E/g; s/ε/e/g;
+s/Π­/E\'/g; s/Ρ/e\'/g;
+s/Π•/E/g; s/Πµ/e/g;
 
-s/Ηυ/Z\'h/g; s/ηυ/z\'h/g; s/ΗΥ/Z\'H/g;
-s/Ζ/Zh/g; s/ζ/zh/g;
+s/Π—Ρ…/Z\'h/g; s/Π·Ρ…/z\'h/g; s/Π—Π¥/Z\'H/g;
+s/Π–/Zh/g; s/Π¶/zh/g;
 
 tr/
-ΰαβγδηθικλμνξοπρςστυφϊϋόΐΑΒΓΔΗΘΙΚΛΜΝΞΟΠΡÒΣΤΥΦΪΫά/
+Π°Π±Π²Π³Π΄Π·ΠΈΠΉΠΊΠ»ΠΌΠ½ΠΎΠΏΡ€ΡΡ‚ΡƒΡ„Ρ…Ρ†ΡΡ‹ΡΠΠ‘Π’Π“Π”Π—ΠΠ™ΠΠ›ΠΠΠΠΠ Π΅ΠΆΠ£Π¤Π¥Π¦ΠªΠ«Π¬/
 abvgdzijklmnoprstufhc\"y\'ABVGDZIJKLMNOPRSTUFHC\"Y\'/;
 
 return $_;
@@ -40,7 +40,7 @@ return $_;
 }
 
 print "name, curia, block, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20, q21, q22, q23, q24, q25\n";
-@curias = qw(common lib left naz);
+@curias = qw(common left lib naz);
 $curia = -1;
 while(<>){
 	if (/h2.(.*)..h2/){
@@ -60,9 +60,9 @@ while(<>){
  	if (/<span class=.title.>/){
  		$_ = <>;
  		/^\s+(.*)\s+$/;
- 		$name = k82tr($1);
+ 		$name = $1; #k82tr($1);
  		@ps = split(/[\s()]+/, $_);
- 		$name = join(" ", @ps[0,1]);
+ 		$name = join(" ", @ps[0,1,2]);
  	}
  	if (/candidate_compass_data.>\[(.*)\]/){
  		$compass = $1;

@@ -1,3 +1,4 @@
+#!rscript
 # prepare csv files for import in gephi. Coordinates — result of PCA
 fnodes = "../data/gnodes.csv"
 fedges = "../data/gedges.csv"
@@ -50,7 +51,7 @@ weights = cbind(all_edges, d[all_edges])
 edges = (weights[order(weights[,3]),])[1:1000,]
 Source = edges[,1]
 Target = edges[,2]
-Weight = 30-edges[,3]
+Weight = 7-edges[,3]
 Type = "undirected"
 write.table(
 	data.frame(Source, Target, Weight, Type),
