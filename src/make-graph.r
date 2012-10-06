@@ -1,9 +1,11 @@
 # prepare csv files for import in gephi. Coordinates — result of PCA
-
-v <- read.csv("../data/vectors.csv", encoding="Windows-1251")
 fnodes = "../data/gnodes.csv"
 fedges = "../data/gedges.csv"
-#nodes
+fply = "../data/g.ply"
+
+
+v <- read.csv("../data/vectors.csv", encoding="Windows-1251")
+
 Label = v[,1]
 Curia = v[,2]
 Block = v[,3]
@@ -16,20 +18,14 @@ y <- pca$scores[,2]
 z <- pca$scores[,3]
 m <- pca$scores[,4]
 
-plyFile = "../data/g.ply"
-
+# ply-file: Points Cloud
 header = sprintf("ply\nformat ascii 1.0\nelement vertex %d\nproperty float x\nproperty float y\nproperty float z\nproperty int Red\nproperty int Green\nproperty int Blue\nend_header\n", 167);
-cat(
-	header,
-	file = plyFile
-)
+cat(header, file = fply)
 
 color = col2rgb(as.integer(factor(Block)))
-
-
 write.table(
 	data.frame(x, y, z, color[1,], color[2,], color[3,]),
-	file=plyFile,
+	file=fply,
 	sep = ' ',
 	quote = FALSE,
 	row.names = FALSE,
@@ -37,7 +33,7 @@ write.table(
 	append=TRUE
 )
 
-
+# csv nodes
 write.table(
 	data.frame(Id, Label, Curia, Block, x, y, z, m),
 	file=fnodes,
@@ -47,7 +43,7 @@ write.table(
 )
 
 
-#edges
+# csv edges
 d = as.matrix(dist(ans))
 all_edges = t(combn(1:(dim(d)[1]), 2))
 weights = cbind(all_edges, d[all_edges])
