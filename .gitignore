@@ -5,3 +5,5 @@ obj
 # mstest test results
 TestResults
 /src/*.Rhistory
+/data/.RData
+/data/.Rhistory
