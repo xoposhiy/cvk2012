@@ -14,6 +14,7 @@ namespace protocols
 		private static Dictionary<string, string> mmmOptions;
 		private static Dictionary<string, string> options;
 		private static Dictionary<string, string> voters;
+		private static Dictionary<string, bool> deactivated = new Dictionary<string, bool>();
 
 		static void Main(string[] args)
 		{
@@ -23,26 +24,35 @@ namespace protocols
 			Console.WriteLine("loading voters...");
 			var lines = File.ReadAllLines("voters.csv").Skip(1).Select(line => line.Split(';')).ToList();
 			Console.WriteLine("parsing voters...");
+			deactivated = lines.ToDictionary(parts => parts[0] + parts[2].Substring(3), parts => parts[3].Contains("Deactivated"));
+			voters = lines.ToDictionary(parts => parts[0] + parts[2].Substring(3), parts => parts[1]); //id+phone => datetime
+			Console.WriteLine("voters: {0}", voters.Count);
 
-			voters = new Dictionary<string, string>();
-			foreach (var parts in lines)
-			{
-				voters[parts[0]] = parts[1];
-//				Console.WriteLine(parts[0]);
-			}
-			
 			
 			Console.WriteLine("decrypting...");
 			var decrypted = new Blowfish(File.ReadAllText("key.txt")).decryptString(File.ReadAllText("protocol.csv"));
 			File.WriteAllText("decrypted.csv", decrypted);
 			Console.WriteLine("filtering...");
-			var voteLines = decrypted.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries).Skip(1);
-			var votes = voteLines.Select(v => new { voter = v.Split(';')[0], candidates = v.Split(';')[2].Split(',').ToArray() }).ToList();
-			var results = votes.Where(v => !IsMmm(v.voter, v.candidates)).SelectMany(v => v.candidates).GroupBy(cand => cand).ToDictionary(g => g.Key, g => g.Count());
+			var voteLines = decrypted.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries).Skip(1).Select(line => line.Split(';'));
+			var votes = voteLines
+				.Select(
+				parts => new
+					{
+						voter = parts[0] + parts[1],  //id + phone
+						candidates = parts[2].Split(',').ToArray()
+					}).ToList();
+			Console.WriteLine("deactivated count: " + deactivated.Count(kv => kv.Value)); // не 0
+			Console.WriteLine("Votes by deactivated: " + votes.Count(v => deactivated[v.voter])); //0
+
+			var results = votes
+				.Where(v => !IsMmm(v.voter, v.candidates) && !deactivated[v.voter])
+				.SelectMany(v => v.candidates)
+				.GroupBy(cand => cand)
+				.ToDictionary(g => g.Key, g => g.Count());
 			Console.WriteLine("results:");
 			foreach (var res in results.OrderByDescending(kv => kv.Value))
 			{
-				Console.WriteLine(res.Value + "\t" + res.Key + "\t" + options[res.Key]);
+				Console.WriteLine(res.Value + "\t" + options[res.Key]);
 			}
 		}
 
