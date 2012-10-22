@@ -7,3 +7,5 @@ TestResults
 /src/*.Rhistory
 /data/.RData
 /data/.Rhistory
+/protocols/protocols/*.suo
+/protocols/protocols/*.user
