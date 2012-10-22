@@ -61,6 +61,22 @@ namespace ConsoleApplication2
 			CreateBanLists(votes, users);
 
 			WriteVotingStats(votes);
+			WriteGroupStatistics(votes);
+		}
+
+		private static void WriteGroupStatistics(List<IGrouping<string, int>> votes)
+		{
+			var votesWithMoreThan4ChecksInCommonList = votes.Where(v => v.Where(c => allCandidates[c].List == 1).Distinct().Count() > 4);
+			var votings = votesWithMoreThan4ChecksInCommonList.Select(
+				v => string.Join(",", 
+					v.Where(c => allCandidates[c].List == 1)
+					.Distinct().OrderBy(c => c)
+					.Select(c => c.ToString())
+					.ToArray()
+				)).ToList();
+			var groups = votings.GroupBy(v => v);
+			var groupSizes = groups.Select(g => new {Votings = g.Key, Size = g.Count()}).OrderByDescending(g => g.Size);
+			File.WriteAllLines("groups_sizes.txt", groupSizes.Select(gs => gs.Size+" " + gs.Votings));
 		}
 
 		private static void LoadCandidates()
@@ -73,13 +89,13 @@ namespace ConsoleApplication2
 		{
 			Console.WriteLine("Creating banlists...");
 			var banAll = votes.Where(VoteLikeMavrodi).Select(g => g.Key).ToList();
-			File.WriteAllLines("ban_all", banAll);
+			File.WriteAllLines("ban_all.txt", banAll);
 			Console.WriteLine("	Ban all: {0}", banAll.Count);
 			var banRegAfterBlock = banAll.Where(person => users[person].RegDate > MMM_LK_Blocked).ToList();
-			File.WriteAllLines("ban_reg_after_block", banRegAfterBlock);
+			File.WriteAllLines("ban_reg_after_block.txt", banRegAfterBlock);
 			Console.WriteLine("	Ban reg after LK block: {0}", banRegAfterBlock.Count);
 			var banDetectedAndRegAfterBlock = banRegAfterBlock.Where(person => users[person].MmmByPhone || users[person].MmmByRef).ToList();
-			File.WriteAllLines("ban_detected", banDetectedAndRegAfterBlock);
+			File.WriteAllLines("ban_detected.txt", banDetectedAndRegAfterBlock);
 			Console.WriteLine("	Ban detected before voting: {0}", banDetectedAndRegAfterBlock.Count);
 		}
 
@@ -107,7 +123,7 @@ namespace ConsoleApplication2
 
 		private static void WriteVotingStats(List<IGrouping<string, int>> votes)
 		{
-			File.WriteAllLines("voting_like_mmm_in_common_list", votes.Select(VotesCountLikeMavrodiInCommonList).OrderByDescending(m => m).Select(m => m.ToString()));
+			File.WriteAllLines("voting_like_mmm_in_common_list.txt", votes.Select(VotesCountLikeMavrodiInCommonList).OrderByDescending(m => m).Select(m => m.ToString()));
 		}
 
 		private static bool VoteLikeMavrodi(IEnumerable<int> votes)
