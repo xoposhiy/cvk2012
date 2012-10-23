@@ -43,6 +43,11 @@ namespace protocols
 					}).ToList();
 			Console.WriteLine("deactivated count: " + deactivated.Count(kv => kv.Value)); // не 0
 			Console.WriteLine("Votes by deactivated: " + votes.Count(v => deactivated[v.voter])); //0
+			Console.WriteLine("Voters with more than 45 votes: " + votes.Count(v => v.candidates.Count() > 45)); //0
+			Console.WriteLine("Voters with duplicated votes: " + votes.Count(v => v.candidates.Distinct().Count() != v.candidates.Count())); //0
+			Console.WriteLine("Voters with more than 45 UNIQUE votes: " + votes.Count(v => v.candidates.Distinct().Count() > 45)); //0
+			
+			Console.WriteLine("Banned MMMs: " + votes.Count(v => IsMmm(v.voter, v.candidates)));
 
 			var results = votes
 				.Where(v => !IsMmm(v.voter, v.candidates) && !deactivated[v.voter])
@@ -51,6 +56,18 @@ namespace protocols
 				.ToDictionary(g => g.Key, g => g.Count());
 			Console.WriteLine("results:");
 			foreach (var res in results.OrderByDescending(kv => kv.Value))
+			{
+				Console.WriteLine(res.Value + "\t" + options[res.Key]);
+			}
+			Console.WriteLine("Elliminate ALL MMM:");
+			Console.WriteLine("Banned ALL MMMs: " + votes.Count(v => IsMmmAll(v.voter, v.candidates)));
+			Console.WriteLine("results:");
+			var results2 = votes
+				.Where(v => !IsMmmAll(v.voter, v.candidates) && !deactivated[v.voter])
+				.SelectMany(v => v.candidates)
+				.GroupBy(cand => cand)
+				.ToDictionary(g => g.Key, g => g.Count());
+			foreach (var res in results2.OrderByDescending(kv => kv.Value))
 			{
 				Console.WriteLine(res.Value + "\t" + options[res.Key]);
 			}
@@ -71,6 +88,13 @@ namespace protocols
 			if (!voters.ContainsKey(voter))
 				throw new Exception(voter);
 			return candidates.Distinct().Count(mmmOptions.ContainsKey) == 38 && ParseDateTime(voters[voter]) > new DateTime(2012, 10, 16, 12, 0, 0);
+		}
+
+		private static bool IsMmmAll(string voter, string[] candidates)
+		{
+			if (!voters.ContainsKey(voter))
+				throw new Exception(voter);
+			return candidates.Distinct().Count(mmmOptions.ContainsKey) > 15 || candidates.All(mmmOptions.ContainsKey) && candidates.Count() > 10;
 		}
 	}
 }
