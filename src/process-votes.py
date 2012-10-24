@@ -1,5 +1,6 @@
 #!/usr/bin/env python2.7
 import numpy as np
+import sys
 
 def LoadNames():
     import csv
@@ -25,7 +26,7 @@ if __name__ == "__main__":
     print avgVotes
     a0 = np.random.random(n)
     a1 = 1 - a0
-    for _ in xrange(10):
+    for _ in xrange(60):
         if a0.sum() > a1.sum():
             a0, a1 = a1, a0
         p = ((a0 * gVotesMatrix) / a0.sum()).transpose()
@@ -34,11 +35,10 @@ if __name__ == "__main__":
         ql = np.log(1-q); q0 = np.exp(gVotesMatrix * (np.log(q)-ql) + onesMatrix * ql)
         a0 = (p0/(p0 + q0)).transpose()
         a1 = (q0/(p0 + q0)).transpose()
-        print p.sum(), a0.sum(), q.sum(), a1.sum()
+        print >>sys.stderr, p.sum(), a0.sum(), q.sum(), a1.sum()
     print "MMM choice:"
-    for i in xrange(m):
-        if p[i] > 0.5:
-            print "{0}\t{1}".format(names[idxList[i] + 1], float(p[i]))
+    for i in sorted(xrange(m), key=lambda i: p[i], reverse=True):
+        print "{0}\t{1}".format(names[idxList[i] + 1], float(p[i]))
     print
     print "Right choice:"
     for i in sorted(xrange(m), key=lambda i: q[i], reverse=True):
