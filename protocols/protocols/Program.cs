@@ -51,7 +51,7 @@ namespace protocols
 
 			var results = votes
 				.Where(v => !IsMmm(v.voter, v.candidates) && !deactivated[v.voter])
-				.SelectMany(v => v.candidates)
+				.SelectMany(v => v.candidates.Distinct())
 				.GroupBy(cand => cand)
 				.ToDictionary(g => g.Key, g => g.Count());
 			Console.WriteLine("results:");
@@ -64,7 +64,7 @@ namespace protocols
 			Console.WriteLine("results:");
 			var results2 = votes
 				.Where(v => !IsMmmAll(v.voter, v.candidates) && !deactivated[v.voter])
-				.SelectMany(v => v.candidates)
+				.SelectMany(v => v.candidates.Distinct())
 				.GroupBy(cand => cand)
 				.ToDictionary(g => g.Key, g => g.Count());
 			foreach (var res in results2.OrderByDescending(kv => kv.Value))
