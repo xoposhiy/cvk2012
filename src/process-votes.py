@@ -14,6 +14,7 @@ def LoadNames():
         
 
 if __name__ == "__main__":
+    K = int(sys.argv[1]) if len(sys.argv) > 1 else 2
     gVotes = np.load("all-votes.npy")
     names = LoadNames()
     avg =  np.average(gVotes, axis=0)
@@ -23,10 +24,9 @@ if __name__ == "__main__":
     gVotesMatrix = np.mat(gVotes)
     onesMatrix = np.mat(np.ones([n,m]))
     avgVotes = np.sum(avg)
-    K = 2
     a = np.array([np.random.random(n) for _ in xrange(K)])
     a = list(a / a.sum(axis=0))
-    for _ in xrange(60):
+    for _ in xrange(100):
         a.sort(key=np.sum)    
         p = [((a[i] * gVotesMatrix) / a[i].sum()).transpose() for i in xrange(K)]
         pa = []
@@ -37,8 +37,8 @@ if __name__ == "__main__":
         for i in xrange(K):
             a[i] = (pa[i] / sa).transpose()
         print >>sys.stderr, map(np.sum, a), map(np.sum, p)
-    for i in xrange(K):
-        print "choice #{0}:".format(i + 1)
-        for j in sorted(xrange(m), key=lambda k: p[i][k], reverse=True):
-            print "{0}\t{1}".format(names[idxList[j] + 1], float(p[i][j]))
+    orders = [sorted(xrange(m), key=lambda k:p[i][k], reverse=True) for i in xrange(K)]
+    print "\t".join("Group size: {0:.0f}".format(a[i].sum()) for i in xrange(K))
+    for j in xrange(m):
+        print "\t".join("[{1:.6f}] {0}".format(names[idxList[orders[i][j]]+1], float(p[i][orders[i][j]])) for i in xrange(K))
 
