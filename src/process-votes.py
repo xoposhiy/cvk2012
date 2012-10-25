@@ -23,23 +23,22 @@ if __name__ == "__main__":
     gVotesMatrix = np.mat(gVotes)
     onesMatrix = np.mat(np.ones([n,m]))
     avgVotes = np.sum(avg)
-    print avgVotes
-    a0 = np.random.random(n)
-    a1 = 1 - a0
+    K = 2
+    a = np.array([np.random.random(n) for _ in xrange(K)])
+    a = list(a / a.sum(axis=0))
     for _ in xrange(60):
-        if a0.sum() > a1.sum():
-            a0, a1 = a1, a0
-        p = ((a0 * gVotesMatrix) / a0.sum()).transpose()
-        q = ((a1 * gVotesMatrix) / a1.sum()).transpose()
-        pl = np.log(1-p); p0 = np.exp(gVotesMatrix * (np.log(p)-pl) + onesMatrix * pl)
-        ql = np.log(1-q); q0 = np.exp(gVotesMatrix * (np.log(q)-ql) + onesMatrix * ql)
-        a0 = (p0/(p0 + q0)).transpose()
-        a1 = (q0/(p0 + q0)).transpose()
-        print >>sys.stderr, p.sum(), a0.sum(), q.sum(), a1.sum()
-    print "MMM choice:"
-    for i in sorted(xrange(m), key=lambda i: p[i], reverse=True):
-        print "{0}\t{1}".format(names[idxList[i] + 1], float(p[i]))
-    print
-    print "Right choice:"
-    for i in sorted(xrange(m), key=lambda i: q[i], reverse=True):
-        print "{0}\t{1}".format(names[idxList[i] + 1], float(q[i]))
+        a.sort(key=np.sum)    
+        p = [((a[i] * gVotesMatrix) / a[i].sum()).transpose() for i in xrange(K)]
+        pa = []
+        for i in xrange(K):
+            tmp = np.log(1-p[i])
+            pa.append(np.exp(gVotesMatrix * (np.log(p[i]) - tmp) + onesMatrix * tmp))
+        sa = sum(pa)
+        for i in xrange(K):
+            a[i] = (pa[i] / sa).transpose()
+        print >>sys.stderr, map(np.sum, a), map(np.sum, p)
+    for i in xrange(K):
+        print "choice #{0}:".format(i + 1)
+        for j in sorted(xrange(m), key=lambda k: p[i][k], reverse=True):
+            print "{0}\t{1}".format(names[idxList[j] + 1], float(p[i][j]))
+
