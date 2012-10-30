@@ -94,7 +94,7 @@ namespace protocols
 		{
 			if (!voters.ContainsKey(voter))
 				throw new Exception(voter);
-			return candidates.Distinct().Count(mmmOptions.ContainsKey) > 15 || candidates.All(mmmOptions.ContainsKey) && candidates.Count() > 10;
+			return candidates.Distinct().Count(mmmOptions.ContainsKey) > 15 || candidates.All(mmmOptions.ContainsKey) && candidates.Distinct().Count() > 10;
 		}
 	}
 }
