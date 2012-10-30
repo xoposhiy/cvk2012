@@ -9,3 +9,4 @@ TestResults
 /data/.Rhistory
 /protocols/protocols/*.suo
 /protocols/protocols/*.user
+/protocols/protocols/_ReSharper.protocols
